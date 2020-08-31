@@ -1,7 +1,6 @@
-# README
+# GLADD
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![unnamed](https://user-images.githubusercontent.com/61069416/91679593-cbd89c80-eb16-11ea-916a-0893d4e279f5.png)
 
 Things you may want to cover:
 
