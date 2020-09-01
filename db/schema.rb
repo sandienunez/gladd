@@ -10,13 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_212748) do
+ActiveRecord::Schema.define(version: 2020_09_01_195911) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "task_id"
+    t.string "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "daily_checkins", force: :cascade do |t|
+    t.integer "emotional_scale"
+    t.boolean "tasks_completed"
+    t.string "went_well_tips"
+    t.string "bad_tips"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string "task_name"
     t.string "prayer"
     t.string "exercise"
-    t.text "vitamins"
+    t.text "supplements"
     t.text "daily_plan"
     t.string "stretch"
     t.text "diet"
