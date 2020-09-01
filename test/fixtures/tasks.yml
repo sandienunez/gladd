@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_name: 
+  prayer: 
+  exercise: 
+  vitamins: 
+  daily_plan: 
+  stretch: 
+  diet: MyText
+
+two:
+  task_name: 
+  prayer: 
+  exercise: 
+  vitamins: 
+  daily_plan: 
+  stretch: 
+  diet: MyText

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emotional_scale: 1
+  tasks_completed: false
+  went_well_tips: MyString
+  bad_tips: MyString
+
+two:
+  emotional_scale: 1
+  tasks_completed: false
+  went_well_tips: MyString
+  bad_tips: MyString
