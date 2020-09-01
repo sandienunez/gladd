@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
   resources :comments
-  recources :tasks
+  resources :tasks
   resources :daily_checkins
   devise_for :users, :controllers => {registrations: 'registrations' }
 
