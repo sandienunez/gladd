@@ -1,0 +1,19 @@
+ol.c {list-style-type: decimal;} 
+
+h2 strong {
+    display: block;
+    font-size: 75%;
+    opacity: 0.75;
+  }
+
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+ 
+  
+  
