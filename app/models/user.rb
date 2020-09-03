@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :tasks #that user has created 
   validates :email, uniqueness: true, presence: true  
   validates_presence_of :full_name
-  has_secure_password
+  #has_secure_password not needed bc of devise 
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

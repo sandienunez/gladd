@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
   # devise_for :users
+  devise_for :users, :controllers => {registrations: 'registrations' }
+
   get '/' => 'sessions#index'
   get '/login' => 'sessions#new'
-  get 'users/signup', to: 'users#new', as: 'register'
+  get '/signup', to: 'users#new', as: 'register'
   post '/signup' => 'users#create'
   # delete '/tasks/:id', to: 'tasks#destroy' as: 'delete_task'
   resources :users
   resources :comments
   resources :tasks
   resources :daily_checkins
-  devise_for :users, :controllers => {registrations: 'registrations' }
   root to: 'user#new'
 
   
