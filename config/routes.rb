@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   # devise_for :users
   get '/' => 'sessions#index'
-  get '/login' => 'sessions#create'
+  get '/login' => 'sessions#new'
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
+  # delete '/tasks/:id', to: 'tasks#destroy' as: 'delete_task'
+  resources :users
   resources :comments
   resources :tasks
   resources :daily_checkins
