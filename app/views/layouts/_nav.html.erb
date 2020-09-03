@@ -10,7 +10,7 @@
             <li><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
             <!--destroy_user_session_path= devise route = deletes request to sign out user 
             -don't forget to send method as well -->
-            <p><%= current_user.email %></p>
+            <p><%= current_user.full_name %></p>
         <% end %>
     </ul>
 

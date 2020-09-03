@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     #GET /register - New User Action 
     def new #actions 
         @user = User.new
+
     end
 
     #POST /users - Create User Action 

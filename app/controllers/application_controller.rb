@@ -1,6 +1,12 @@
 class ApplicationController < ActionController::Base
 
-    # new_user_registration_path
-  # new_user_session_path
-  # destroy_user_session_path
+  before_action :set_users
+
+  private
+
+  def set_users
+      @categories = Category.all
+  end
+
+
 end
