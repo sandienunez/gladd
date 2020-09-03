@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
-    def new 
+
+    #GET /register - New User Action 
+    def new #actions 
         @user = User.new
     end
 
+    #POST /users - Create User Action 
     def create
         @user = User.new(user_params)
         if @user.save
