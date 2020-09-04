@@ -20,6 +20,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'pry'
 # gem 'awesome_print'
 gem 'devise'
+gem 'omniauth-github'
+gem 'dotenv-rails'
 gem 'bcrypt'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
