@@ -42,4 +42,27 @@ Heart of app: ppl with add can create and visually see tasks layed out (add cale
 -Daily check in attributes (add date): focus (1-5), Organization, self-control, worry, mood, memory, sleep, other/list, Hours slept 
 -change daily check in name to daily journal, my day, 
 
+User signup → appconcepts.com/users/new:
+
+As a guest
+I want to sign up
+So I can submit a concept
+Create concept → appconcepts.com/concepts/new
+
+As a user
+I want to submit a concept
+So that others can gain inspiration
+Section index → appconcepts.com/sections/rails/concepts
+
+As a user
+I want to view all concepts for a section
+So that others can gain inspiration from my project
+
+
+<p>
+    <%= link_to "Login", login_path %>
+    <%= link_to "Signup", register_path %>
+
+</p>
+
 
