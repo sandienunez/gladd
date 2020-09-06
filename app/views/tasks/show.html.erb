@@ -2,8 +2,32 @@
 
      <%= @task.prayer %>
 
+      <br>
+      <br>
+        <%= @task.prayer %>
+
+      <br>
+      <br>
+         <%= @task.exercise %>
+      <br>
+      <br>
+         <%= @task.supplements %>
+      <br>
+      <br>
+         <%= @task.daily_plan  %>
+      
+      <br>
+      <br>
+         <%= @task.stretch %>
+      <br>
+      <br>
+         <%= @task.diet %>
+
+        
 <button><%= link_to 'Edit', edit_task_path %></button>
-      <%= link_to 'Delete' %>
+
+<%= button_to "Delete Task", task_path(@task), method: :delete %>
+    
 
  
 
