@@ -66,3 +66,52 @@ So that others can gain inspiration from my project
 </p>
 
 
+
+-------
+<h1> Sign up to join the GLADD family today.</h1>
+
+<!-- <form action="/users" method ="POST">
+<input type="submit" value ="Register" />
+</form> 
+or
+<%= form_tag("/users") do %>
+    <%= submit_tag %>
+<% end %>
+
+-->
+
+<%= form_for(@user) do |f| %>
+
+  <%= f.label :full_name %>
+    <%= f.text_field :full_name %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password %>
+     <%= f.password_field :password %> <!-- password overrides and converts to password_digest-->
+
+<%= f.submit "Sign Up" %>
+<% end %>
+
+
+------------------------
+
+<nav>
+    <ul>
+    <div style="text-align: right;">
+      <%= link_to "Home", root_path %></li>
+        <% if !user_signed_in? %>
+           <%= link_to "Add a Task", new_task_path %>
+           <%= link_to "Signup", new_user_registration_path %> 
+                  <!--new_user_registration_path= devise route = get request to signup form -->
+            <%= link_to "Login", new_user_session_path %>
+               <!--new_user_session_path= devise route = get request to login form -->
+        <% else %>
+            <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
+            <!--destroy_user_session_path= devise route = deletes request to sign out user 
+            -don't forget to send method as well -->
+            <p><%= current_user.full_name %></p>
+
+
+ ----           

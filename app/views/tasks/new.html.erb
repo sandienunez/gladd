@@ -1,0 +1,30 @@
+<h1> Create your new Task here! </h1>
+
+<%= form_for(@task) do |f| %>
+
+    <%= f.label :task_name %>
+    <%= f.text_field :task_name %>
+
+     <%= f.label :prayer %>
+    <%= f.text_area :prayer%>
+
+     <%= f.label :exercise %>
+    <%= f.text_field :exercise %>
+
+     <%= f.label :supplements %>
+    <%= f.text_field :supplements %>
+
+     <%= f.label :daily_plan %>
+    <%= f.text_area :daily_plan %>
+
+     <%= f.label :stretch %>
+    <%= f.text_field :stretch %>
+
+     <%= f.label :diet %>
+    <%= f.text_area :diet %>
+
+    <%= f.hidden_field :user_id, value: session[:user_id] %>
+
+    <%= f.submit %>
+
+    <% end %>

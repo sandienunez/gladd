@@ -1,9 +1,10 @@
-<h1>Task List </h1>
+<h1> <%= @task.task_name %>  </h1>
 
-<ol class="c">
+     <%= @task.prayer %>
 
-<% @tasks.each do |task| %>
-  <div><%= link_to task.title, task_path(task) %></div>
-<% end %>
+<button><%= link_to 'Edit', edit_task_path %></button>
+      <%= link_to 'Delete' %>
 
-</ol>
+ 
+
+    

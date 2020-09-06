@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   get '/signup', to: 'users#new', as: 'register'
   post '/signup' => 'users#create'
+  
   # delete '/tasks/:id', to: 'tasks#destroy' as: 'delete_task'
   resources :users
   resources :comments

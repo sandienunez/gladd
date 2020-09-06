@@ -1,7 +1,7 @@
 class CallbacksController < Devise::OmniauthCallbacksController 
     #customizing exisiting controllers given to your by omniauth
     def github
-        binding.pry 
+        # binding.pry 
 
         @user = User.from_omniauth(request.env["omniauth.auth"])
 

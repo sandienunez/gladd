@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_09_04_030006) do
   end
 
   create_table "daily_checkins", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "emotional_scale"
     t.boolean "tasks_completed"
     t.string "went_well_tips"
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_09_04_030006) do
   end
 
   create_table "tasks", force: :cascade do |t|
+    t.integer "user_id"
     t.string "task_name"
     t.string "prayer"
     t.string "exercise"
