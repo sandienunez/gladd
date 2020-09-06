@@ -1,6 +1,19 @@
 <ul>
 <h1> Create your new Task here! </h1>
 
+<% if @task.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+ 
+    <ul>
+    <% @task.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
 <%= form_for(@task) do |f| %>
 
     <%= f.label :task_name %>
@@ -44,7 +57,7 @@
 
  <br>
   <br>
-  
+
 
     <%= f.hidden_field :user_id, :value => current_user.id %>
 
