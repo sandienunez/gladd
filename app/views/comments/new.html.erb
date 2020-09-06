@@ -1,4 +1,18 @@
-<%= render 'layouts/nav' %>
 
+
+<h1> Create Comment here! </h1>
 
 <%= render partial: "layouts/errors", locals: {object: @comment} %>
+
+<%= form_for(@comment, url: comments_path) do |f| %>
+
+    <%= f.label :task_name %>
+     <%= f.collection_select :task_id, Task.all, :user_id, :task_name %>
+<br>
+<br>
+     <%= f.label :message %>
+     <%= f.text_field :message %>
+
+    <%= f.submit %>
+
+    <% end %>

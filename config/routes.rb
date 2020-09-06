@@ -9,13 +9,9 @@ Rails.application.routes.draw do
    end
    
 
-    
-
-  #  delete '/tasks/:id', to: 'tasks#destroy' as: 'delete_task'
   resources :comments
   resources :tasks
   resources :daily_checkins
-  # root to: 'user#new'
 
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
