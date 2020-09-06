@@ -1,0 +1,17 @@
+<%= render 'layouts/nav' %>
+
+<h1> Edit Comment </h1>
+
+<%= render partial: "layouts/errors", locals: {object: @comment} %>
+
+<%= form_for(@comment) do |f| %>
+
+    <%= f.label :task %>
+     <%= f.collection_select :task_id, Task.all, :user_id, :task_name %>
+
+     <%= f.label :message %>
+     <%= f.text_field :message %>
+
+    <%= f.submit %>
+
+    <%= end %>
