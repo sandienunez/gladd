@@ -1,5 +1,7 @@
+<%= render 'layouts/nav' %>
 <h1> Edit task </h1>
 <ul>
+<%= render partial: "layouts/errors", locals: {object: @task} %>
 
 <%= form_for(@task) do |f| %>
 <%= f.label :task_name %>
