@@ -28,8 +28,7 @@
 
 <br>      
 <br>  
-<button><%= link_to 'Edit Task', edit_task_path %></button>
-<br>  
+<%= button_to "Edit Task", edit_task_path, method: :get %> 
 <br>  
 <%= button_to "Delete Task", task_path(@task), method: :delete, data: {confirm: "Are you sure you want to delete this task?"} %>
 <br>  

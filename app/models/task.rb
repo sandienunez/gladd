@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-   scope :priority_order, -> { order(task_name: :desc)}
+   scope :priority_order, -> { order(priority_ranking: :desc)}
                             #attribute
 
    #when we call scope we get = ActiveRecord::Relation object
@@ -15,8 +15,8 @@ class Task < ApplicationRecord
          t.created_at.try(:to_date) == Date.today
       end
 
-      if today_tasks.size > 2
-         errors.add(:task_id, "error: In order to ensure that you focus on finishing your tasks, you can't add more then 2 tasks per day.")
+      if today_tasks.size > 3
+         errors.add(:task_id, "error: In order to ensure that you focus on finishing your tasks, you can't add more then 3 tasks per day.")
       end 
    end
 end

@@ -1,10 +1,12 @@
+
 <h1>Comment Feed</h1>
 
 
 <ul>
 <% @comments.each do |comment|%>
 <br>
-  <li><%= current_user.full_name %>  commented "<%= link_to comment.message, comment_path(comment) %>" for this Task: <strong><%= link_to comment.task.task_name, task_path(comment.task_id) %></strong></li>
+
+  <li><%= current_user.full_name %>  commented "<%= link_to comment.message, comment_path(comment) %>" for this Task: <%= link_to comment.task.task_name, task_path(comment.task_id) %></li>
 
 
   <br>

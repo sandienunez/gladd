@@ -34,9 +34,7 @@ class UsersController < ApplicationController
         #require our object 
     end
 
-    def current_user
-        
-    end
+
 
 
 end
