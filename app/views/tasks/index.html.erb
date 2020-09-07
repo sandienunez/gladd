@@ -2,14 +2,14 @@
 
 <h1>Task List </h1>
 
+
 <ul>
-
-<ol class="c">
-
 <% @tasks.each do |task| %>
-  <div><%= link_to task.task_name, task_path(task) %></div>
+<br>
+ <li><%= link_to task.task_name, task_path(task) %></li>
+ <h4>Made by: <%= current_user.full_name %></h4>
+<br>
 <% end %>
-
-</ol>
-
 </ul>
+
+

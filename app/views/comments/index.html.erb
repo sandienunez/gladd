@@ -1,3 +1,12 @@
-<%= render 'layouts/nav' %>
 
+<% if @task %>
+  <h1>Comments for <%= @task.task_name%></h1>
+<% else %>
+  <h1>All Comments</h1>
+<% end %>
 
+<ul>
+<% @comments.each do |t|%>
+  <li><%= current_user.full_name %>says "<%= t.message%>" about this task: <strong><%= link_to t.task.task_name, task_path(t.task_id) %></strong></li>
+<% end %>
+</ul>
