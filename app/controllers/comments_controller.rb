@@ -4,6 +4,7 @@ class CommentsController <  ApplicationController
     end
 
     def create
+        # @comment = Comment.new(comment_params) #which works better build or new here?
         @comment = current_user.comments.build(comment_params)
         if @comment.save
           redirect_to comments_path
@@ -18,6 +19,7 @@ class CommentsController <  ApplicationController
 
     def show
         @comment = Comment.find_by_id(params[:id])
+        
     end
 
     def index 
@@ -39,8 +41,8 @@ class CommentsController <  ApplicationController
         @comment = Comment.find_by_id(params[:id])
         if current_user.id == @comment.user_id
             @comment.destroy
-        redirect_to comments_path 
-     
+        else
+            redirect_to comments_path 
         end
     end
 

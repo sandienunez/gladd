@@ -39,7 +39,8 @@ class TasksController < ActionController::Base
         set_task
         if current_user.id == @task.user_id 
             @task.destroy 
-        redirect_to tasks_path 
+        else
+            redirect_to tasks_path 
         end
     end
 

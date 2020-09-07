@@ -1,6 +1,6 @@
-<%= render 'layouts/nav' %>
 
-<h1> Edit Comment here! </h1>
+
+<h1> Edit Comment: </h1>
 
 <%= render partial: "layouts/errors", locals: {object: @comment} %>
 
@@ -8,10 +8,12 @@
 
     <%= f.label :task %>
      <%= f.collection_select :task_id, Task.all, :user_id, :task_name %>
-
+<br>
+<br>
      <%= f.label :message %>
      <%= f.text_field :message %>
-
-    <%= f.submit %>
+<br>
+<br>
+    <%= f.submit 'Save Changes'%>
 
     <% end %>

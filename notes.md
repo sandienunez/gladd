@@ -198,3 +198,22 @@ def new
     #add destroy for delete button link_to
 
 end 
+
+----
+
+<% if @task %>
+  <h1>Comments for <%= @task.task_name%></h1>
+<% else %>
+  <h1>Comment Feed</h1>
+<% end %>
+
+<ul>
+<% @comments.each do |t|%>
+  <li><%= current_user.full_name %>  commented "<%= t.message%>" for Task: <strong><%= link_to t.task.task_name, task_path(t.task_id) %></strong></li>
+  <%= button_to "Edit Comment", edit_comment_path(t), method: :get %>
+<br>  
+<br>  
+<%= button_to "Delete Comment", comment_path(t), method: :delete %>
+<br>  
+<% end %>
+</ul>

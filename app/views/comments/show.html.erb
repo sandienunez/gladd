@@ -1,11 +1,12 @@
-<%= render 'layouts/nav' %>
-<h1><%= @comment.message%> by: <%= @comment.current_user.full_name %></h1>
-
-<br>
- <%= @comment.task %>  
-
-     <%= @comment.message %>
-
-      <br>
-      <br>
-  
+<h1>Comment:  </h1>
+<ul>
+<li><h3><%= @comment.message %></li></h3>
+ 
+ <li> Created by: <%= current_user.full_name %></li>
+ <br>
+ <li>For this task: <%= link_to @comment.task.task_name, task_path(@comment.task_id) %><li> 
+ <br>
+<% if @comment.user == current_user %>
+    <%= button_to "Edit Comment", edit_comment_path(@comment), method: :get %>
+<% end %> 
+</ul>
