@@ -8,11 +8,11 @@
 <ul>
 <% @comments.each do |t|%>
   <li><%= current_user.full_name %>  commented "<%= t.message%>" for Task: <strong><%= link_to t.task.task_name, task_path(t.task_id) %></strong></li>
+  <%= button_to "Edit Comment", edit_comment_path(t), method: :get %>
+<br>  
+<br>  
+<%= button_to "Delete Comment", comment_path(t), method: :delete %>
+<br>  
 <% end %>
 </ul>
 
-<%= button_to "Edit Comment", edit_comment_path(@comment) %>
-<br>  
-<br>  
-<%= button_to "Delete Comment", comment_path(@task), method: :delete %>
-<br>  
