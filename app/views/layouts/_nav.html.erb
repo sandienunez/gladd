@@ -5,6 +5,7 @@
         <% if user_signed_in? %>
            <%= link_to "Add a Task", new_task_path %>
             <%= link_to "All Tasks", tasks_path %>
+            <%= link_to "All Comments", comments_path %>
            <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
             <!--destroy_user_session_path= devise route = deletes request to sign out user 
             -don't forget to send method as well -->
