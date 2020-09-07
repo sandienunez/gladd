@@ -39,11 +39,11 @@ class CommentsController <  ApplicationController
 
     def destroy
         @comment = Comment.find_by_id(params[:id])
+        # binding.pry
         if current_user.id == @comment.user_id
             @comment.destroy
-        else
-            redirect_to comments_path 
         end
+        redirect_to comments_path 
     end
 
     private
