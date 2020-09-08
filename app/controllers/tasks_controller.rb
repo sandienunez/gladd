@@ -10,6 +10,7 @@ class TasksController < ActionController::Base
     end
 
     def create
+        # binding.pry
         @task = Task.new(task_params)
         if @task.save
             redirect_to task_path(@task)
@@ -54,7 +55,8 @@ class TasksController < ActionController::Base
     end
 
     def task_params
-        params.require(:task).permit(:task_name, :prayer, :exercise, :supplements, :daily_plan, :stretch, :diet, :user_id)
+        # binding.pry
+        params.require(:task).permit(:date, :"date(2i)", :priority_ranking, :task_name, :prayer, :exercise, :supplements, :daily_plan, :stretch, :diet, :user_id)
     end
 
     #add destroy for delete button link_to

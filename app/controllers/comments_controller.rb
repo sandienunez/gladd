@@ -5,7 +5,6 @@ class CommentsController <  ApplicationController
 
     def create
         # binding.pry
-
         @comment = current_user.comments.build(comment_params)
         if @comment.save
           redirect_to comments_path
@@ -13,11 +12,6 @@ class CommentsController <  ApplicationController
           render :new
         end
     end
-
-    # def comment
-    #     @comment ||= Comment.find_or_create_by(task_name: :task_name)
-        # User.where(girls: true).find_or_create_by(first_name: ‘Scarlett’)
-    #   end
 
     def edit 
      @comment = Comment.find_by_id(params[:id])

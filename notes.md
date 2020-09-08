@@ -217,3 +217,20 @@ end
 <br>  
 <% end %>
 </ul>
+
+
+----
+
+ <label>Date</label>
+   <label for="date"></label>
+     <input type="date" id="myDate" name="date">    
+     <p id="demo"></p>
+
+     <script>
+     function myFunction() {
+       var x = document.getElementById("myDate").value;
+       document.getElementById("demo").innerHTML = x;
+     }
+     </script>
+
+     

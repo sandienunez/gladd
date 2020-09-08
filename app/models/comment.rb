@@ -4,12 +4,11 @@ class Comment < ApplicationRecord
 validates :message, presence: true 
 # validates :task, uniqueness: { scope: :user_id,
 # message: "error: Sorry! You can only comment once for each task." }
-# accepts_nested_attributes_for :task
 
-def task_attributes=(hash)
-    binding.pry
+# def task_attributes=(hash)
+#     binding.pry
   
-end
+# end
 
 
 end

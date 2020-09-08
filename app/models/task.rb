@@ -15,8 +15,8 @@ class Task < ApplicationRecord
          t.created_at.try(:to_date) == Date.today
       end
 
-      if today_tasks.size > 3
-         errors.add(:task_id, "error: In order to ensure that you focus on finishing your tasks, you can't add more then 3 tasks per day.")
+      if today_tasks.size > 20
+         errors.add(:task_id, "error: In order to ensure that you focus on finishing your tasks, you can't add more then 20 task per day.")
       end 
    end
 end
