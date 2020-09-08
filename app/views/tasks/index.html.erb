@@ -1,12 +1,13 @@
 <%= render 'layouts/nav' %>
 
 <h1>Task List </h1>
+<h3>Ordered from Highest to Lowest Priority. </h3>
 
 
 <ul>
 <% @tasks.each do |task| %>
 <br>
- <li><%= link_to task.task_name, task_path(task) %></li>
+ <li><%= link_to task.task_name, task_path(task) %>-<%= task.priority_ranking %></li>
  <h4>Made by: <%= current_user.full_name %></h4>
 <br>
 <% end %>
