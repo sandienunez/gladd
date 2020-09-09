@@ -233,4 +233,12 @@ end
      }
      </script>
 
-     
+     ----
+
+     <%= f.label :priority_ranking %>
+<%= f.select(:priority_ranking, options_for_select((1..6), :selected => @task.priority_ranking, :include_blank => true)) %>
+<!--<%= f.select :priority_ranking, options_for_select(1..5), { prompt: "Please Choose between 1-5, where 1 = not urgent and 5 = super important!" } %> -->
+ <br>
+  <br>
+
+  -----

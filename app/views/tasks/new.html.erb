@@ -25,7 +25,7 @@
   <br>
 
     <%= f.label :priority_ranking %>
-   <%= f.select :priority_ranking, options_for_select(1..5), { prompt: "Please Choose between 1-5, where 1 = not urgent and 5 = super important!" } %>
+   <%= f.select :priority_ranking, options_for_select(1..6), { prompt: "Please Choose a ranking, 1 = not urgent and 6 = ULTRA important!" } %>
 
  <br>
   <br>
@@ -47,7 +47,7 @@
   <br>
 
      <%= f.label :supplements %>
-    <%= f.text_field :supplements %>
+    <%= f.text_area :supplements %>
 
  <br>
   <br>

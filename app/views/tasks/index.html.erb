@@ -1,13 +1,20 @@
 <%= render 'layouts/nav' %>
 
 <h1>Task List </h1>
-<h3>Ordered from Highest to Lowest Priority. </h3>
+<h3>Your list is ordered from Highest to Lowest Priority below. </h3>
+<p> 1 = Lowest Priority (Task can be done by next week, not urgent at all)</p>
+<p> 2 = Lowest Priority (Task should be done this week if possible, not as pressing)</p>
+<p> 3 = Lowest Priority (Task will be completed in the next 2 days, pretty important)</p>
+<p> 4 = Lowest Priority (Task needs to be finished by tomorrow, very important)</p>
+<p> 5 = Highest Priority (Task needs to be completed today BUT can wait until later today, extra important)</p>
+<p> 6 = Highest Priority (Task needs to be completed right now, MOST important)</p>
+
 
 
 <ul>
 <% @tasks.each do |task| %>
 <br>
- <li><%= link_to task.task_name, task_path(task) %>-<%= task.priority_ranking %></li>
+ <li><%= link_to task.task_name, task_path(task) %>-Priority Rating: <%= task.priority_ranking %></li>
  <h4>Made by: <%= current_user.full_name %></h4>
 <br>
 <% end %>
