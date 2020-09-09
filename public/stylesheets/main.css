@@ -22,8 +22,9 @@ h2 strong {
   /* --- Welcome Page Styles --- */
   
   body {
-    background: linear-gradient(to bottom right, #0446f5 21%, #ff9933 100%);
-    font-family: Aladin;
+    background-color: #feeb83;
+    color: #a4c2f5;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 20px;
   }
 
