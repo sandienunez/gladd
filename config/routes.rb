@@ -13,6 +13,19 @@ Rails.application.routes.draw do
   resources :tasks
   resources :daily_checkins
 
+  #nested resources = treat instances of models as URLs, and is key to using resourceful style
+
+  #daily_checkin_task_path
+  #or 
+resources :daily_checkins do
+  resources :tasks, only: [:index, :new, :create, :show] #build 3 nested routes
+end
+resources :tasks, only: [:show, :edit, :update, :destroy]
+
+#<%= link_to 'Ad details', [@magazine, @ad] %>
+
+
+
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

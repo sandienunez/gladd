@@ -15,7 +15,7 @@
 <% @tasks.each do |task| %>
 <br>
  <li><%= link_to task.task_name, task_path(task) %>-Priority Rating: <%= task.priority_ranking %></li>
- <h4>Made by: <%= current_user.full_name %></h4>
+ <h4>Made by: <%= task.user.full_name %></h4>
 <br>
 <% end %>
 </ul>
