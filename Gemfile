@@ -23,6 +23,9 @@ gem 'devise'
 gem 'omniauth-github'
 gem 'dotenv-rails'
 gem 'bcrypt'
+gem 'rename'
+gem 'bootstrap', '~> 5.0.0.alpha1'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
