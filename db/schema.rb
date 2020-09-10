@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_08_192007) do
+ActiveRecord::Schema.define(version: 2020_09_10_014933) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_09_08_192007) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "daily_checkins", force: :cascade do |t|
+  create_table "daily_routines", force: :cascade do |t|
     t.integer "user_id"
     t.integer "emotional_scale"
     t.boolean "tasks_completed"

@@ -11,13 +11,13 @@ Rails.application.routes.draw do
 
   resources :comments
   resources :tasks
-  resources :daily_checkins
+  resources :daily_routines
 
   #nested resources = treat instances of models as URLs, and is key to using resourceful style
 
   #daily_checkin_task_path
   #or 
-resources :daily_checkins do
+resources :daily_routines do
   resources :tasks, only: [:index, :new, :create, :show] #build 3 nested routes
 end
 resources :tasks, only: [:show, :edit, :update, :destroy]

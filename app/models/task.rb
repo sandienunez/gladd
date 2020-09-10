@@ -4,7 +4,7 @@ class Task < ApplicationRecord
 
    #when we call scope we get = ActiveRecord::Relation object
    belongs_to :user, optional: true 
-   belongs_to :daily_checkin, optional: true 
+   belongs_to :daily_routine, optional: true 
    has_many :comments, dependent: :destroy
    has_many :users, through: :comments #ppl who have commented on it
    validates :task_name, :prayer, :exercise, :supplements, :daily_plan, :stretch, :diet, presence: true 

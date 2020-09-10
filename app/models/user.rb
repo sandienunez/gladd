@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :commented_tasks, through: :comments, source: :tasks  
   #rename relationship and still have access to them 
   has_many :tasks #that user has created 
-  has_many :daily_checkins, through: :tasks #check about this 
+  has_many :daily_routines, through: :tasks #check about this 
   validates :email, uniqueness: true, presence: true  
   validates_presence_of :full_name
   #has_secure_password not needed bc of devise 

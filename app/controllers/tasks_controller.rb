@@ -1,8 +1,9 @@
 class TasksController < ActionController::Base
 
     def new
+        # binding.pry
         @task = Task.new
-        @daily_checkin = @daily_checkin.daily_checkins.build
+        @daily_routine = @daily_routine.daily_routines.build
     end 
 
     def index 
@@ -23,7 +24,7 @@ class TasksController < ActionController::Base
     def show 
         binding.pry
         set_task
-        @daily_checkin = Daily_checkin.find(params[:daily_checkin_id])
+        @daily_routine = Daily_routine.find(params[:daily_routine_id])
     end
 
     def edit
