@@ -3,12 +3,10 @@ class CreateTasks < ActiveRecord::Migration[6.0]
     create_table :tasks do |t|
       t.integer :user_id
       t.string :task_name
-      t.string :prayer
-      t.string :exercise
-      t.text :vitamins
-      t.text :daily_plan
-      t.string :stretch
-      t.text :diet
+      t.text :action_one
+      t.text :action_two
+      t.text :action_three
+
 
       
 

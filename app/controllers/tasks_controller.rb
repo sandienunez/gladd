@@ -3,7 +3,7 @@ class TasksController < ActionController::Base
     def new
         # binding.pry
         @task = Task.new
-        @daily_routine = @daily_routine.daily_routines.build
+        
     end 
 
     def index 

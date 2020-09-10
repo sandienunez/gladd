@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_10_014933) do
+ActiveRecord::Schema.define(version: 2020_09_08_192007) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 2020_09_10_014933) do
 
   create_table "daily_routines", force: :cascade do |t|
     t.integer "user_id"
+    t.text "daily_plan"
+    t.string "prayer_or_meditations"
+    t.text "exercise_plan"
+    t.text "stretch_plan"
+    t.text "three_superfoods_to_add_to_my_meals"
     t.integer "emotional_scale"
     t.boolean "tasks_completed"
     t.string "went_well_tips"
@@ -33,12 +38,9 @@ ActiveRecord::Schema.define(version: 2020_09_10_014933) do
   create_table "tasks", force: :cascade do |t|
     t.integer "user_id"
     t.string "task_name"
-    t.string "prayer"
-    t.string "exercise"
-    t.text "supplements"
-    t.text "daily_plan"
-    t.string "stretch"
-    t.text "diet"
+    t.text "action_one"
+    t.text "action_two"
+    t.text "action_three"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "priority_ranking"

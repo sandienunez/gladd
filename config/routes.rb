@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 resources :daily_routines do
   resources :tasks, only: [:index, :new, :create, :show] #build 3 nested routes
 end
-resources :tasks, only: [:show, :edit, :update, :destroy]
+
 
 #<%= link_to 'Ad details', [@magazine, @ad] %>
 
