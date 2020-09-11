@@ -4,12 +4,12 @@
       <%= link_to "Home", root_path %></li>
         <% if user_signed_in? %>
            <%= link_to "Add a Task", new_task_path %>
-            <%= link_to "All Tasks", tasks_path %>
+            <%= link_to "Daily Tasks", tasks_path %>
             <%= link_to "All Comments", comments_path %>
+            <%= link_to "Add a Daily Routine", new_daily_routine_path %>
            <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
             <!--destroy_user_session_path= devise route = deletes request to sign out user 
             -don't forget to send method as well -->
-            <p><%= current_user.full_name %></p>
         <% else %>
             <%= link_to "Signup", new_user_registration_path %> 
                   <!--new_user_registration_path= devise route = get request to signup form -->

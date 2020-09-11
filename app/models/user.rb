@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :comments
-  has_many :commented_tasks, through: :comments, source: :tasks  
+  has_many :commented_tasks, through: :comments, source: :tasks  #do i still need this if these are nested?
   #rename relationship and still have access to them 
   has_many :tasks #that user has created 
   has_many :daily_routines, through: :tasks #check about this 

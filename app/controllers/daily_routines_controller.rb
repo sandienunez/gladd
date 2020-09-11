@@ -1,3 +1,5 @@
-class DailyRoutinesController < ApplicationController::Base
+class DailyRoutinesController < ApplicationController
+
+    
 
 end

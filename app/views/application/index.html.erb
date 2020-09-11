@@ -7,7 +7,7 @@
 body {background-color: khaki;}
 
 h2 {
-  color: lightsteelblue;
+  color: #619ce0;
   font-family: arial;
   font-size: 300%;
 
@@ -15,11 +15,13 @@ h2 {
 </style>
 </head>
 <body>
+<div style="text-align: left;">
+<h2><%= greet %>, <%= current_user.full_name %>.</h2>
+</div>
 
 <div style="text-align: center;">
-<h2><strong>Welcome to GLADD!</strong></h2>
-<img src="/images/taskylogo.png" alt="logo" >
-<img src="/images/tasky2.png" alt="2" > 
+<img src="/images/taskylogo.png" width="760" height="700" alt="logo" >
+<img src="/images/tasky2.png" width="1200" height="850" alt="2" > 
 
 </div>
 </body>

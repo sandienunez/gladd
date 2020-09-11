@@ -242,3 +242,56 @@ end
   <br>
 
   -----
+
+<p><%= current_user.full_name %></p>
+
+---
+
+<div class="media">
+    <div class="media-body">
+        <table class="table table-hover">
+        <thead>
+        <th><strong>Priority Ranking</strong></th>
+            <th>Actions</th>
+            <th>Made</th>
+            <th>Deadline</th>
+            <th>Time it will take to finish</th>
+        </thead>
+        <tbody>
+          <tr>   
+            <td><h4><%= @task.priority_ranking %></h4></td>
+            <td><h4><%= @task.action_one %></h4></td>
+            <td><h4><%= @task.action_two %></h4></td>
+            <td><h4><%= @task.action_three %></h4></td>
+           </tr>
+        </tbody>
+</table>
+</div>
+</div>
+
+<strong>Action 2:</strong>
+<%=  @task.action_two %></p>
+
+<strong>Action 3:</strong>
+<%=  @task.action_three %></p>
+
+<strong>Priority Ranking:</strong>
+ <%=  @task.priority_ranking %>
+<strong>Deadline for Task: </strong>
+<strong>How long will it take to finish this task? </strong>
+<strong>Date task was created:</strong>
+<%=  @task.date %>
+
+<br>      
+<%= button_to "Edit Task", edit_task_path, method: :get %> 
+<br>  
+<%= button_to "Delete Task", task_path(@task), method: :delete, data: {confirm: "Are you sure you want to delete this task?"} %>
+<br>  
+<%= button_to "Add Comment", new_comment_path, method: :get %>
+<br>  
+
+<h1>Comments: </h1>
+<p> <%= current_user.full_name %> says </p>
+       
+                <td><h4><%= @comment.message %></h4></td>
+        

@@ -1,18 +1,21 @@
-class TasksController < ActionController::Base
+class TasksController < ApplicationController
 
     def new
         # binding.pry
         @task = Task.new
-        
+        #below only needed if you were adding comment feature to task edit page
+    # @comment = Comment.find_by_id(params[:id])
+    # @comment = current_user.comments.build
+
+    #  @comment = @task.comments.build
     end 
 
     def index 
         @tasks = Task.priority_order
-        # @tasks = Task.all 
     end
 
     def create
-        # binding.pry
+        binding.pry
         @task = Task.new(task_params)
         if @task.save
             redirect_to task_path(@task)
@@ -22,9 +25,10 @@ class TasksController < ActionController::Base
     end 
         
     def show 
-        binding.pry
+        # binding.pry
         set_task
-        @daily_routine = Daily_routine.find(params[:daily_routine_id])
+        @comment = Comment.find_by_id(params[:id])
+        @comment = @task.comments
     end
 
     def edit
@@ -33,7 +37,7 @@ class TasksController < ActionController::Base
 
     def update
         set_task
-
+        current_user.id == @task.user_id 
         if @task.update(task_params)
             redirect_to task_path(@task)
         end
@@ -59,7 +63,7 @@ class TasksController < ActionController::Base
 
     def task_params
         # binding.pry
-        params.require(:task).permit(:date, :"date(2i)", :priority_ranking, :task_name, :prayer, :exercise, :supplements, :daily_plan, :stretch, :diet, :user_id)
+        params.require(:task).permit(:date, :"date(2i)", :priority_ranking, :task_name, :action_one, :action_two, :action_three, :user_id)
     end
 
     #add destroy for delete button link_to

@@ -7,7 +7,7 @@ class Task < ApplicationRecord
    belongs_to :daily_routine, optional: true 
    has_many :comments, dependent: :destroy
    has_many :users, through: :comments #ppl who have commented on it
-   validates :task_name, :prayer, :exercise, :supplements, :daily_plan, :stretch, :diet, presence: true 
+   # validates :task_name, :action_one, :action_two, :action_three, :date, :priority_ranking, presence: true 
    validate :limit_number_of_tasks
 
    def limit_number_of_tasks
@@ -15,8 +15,8 @@ class Task < ApplicationRecord
          t.created_at.try(:to_date) == Date.today
       end
 
-      if today_tasks.size > 20
-         errors.add(:task_id, "error: In order to ensure that you focus on finishing your tasks, you can't add more then 20 task per day.")
+      if today_tasks.size > 6
+         errors.add(:task_id, "error: In order to ensure that you focus on finishing your tasks, you can't add more then 6 tasks per day.")
       end 
    end
 end

@@ -1,14 +1,13 @@
 <%= render 'layouts/nav' %>
 
 
-<%= render partial: "layouts/errors", locals: {object: @daily_checkin} %>
 
 <ul>
 <h1> Plan your Daily Routine here! </h1>
 <h3>Instructions: Next to each row, fill out each part in the space provided.  </h3>
 
 
-<%= form_for(@task) do |f| %>
+<%= form_for(@daily_routine) do |f| %>
 
 
 <%= f.label :date %>
@@ -24,53 +23,52 @@
  <br>
   <br>
 
-    <%= f.label :priority_ranking %>
-   <%= f.select :priority_ranking, options_for_select(1..6), { prompt: "Please Choose a ranking, 1 = not urgent and 6 = ULTRA important!" } %>
-
+    <%= f.label :daily_plan %>
+ <%= f.text_area :daily_plan %>
  <br>
   <br>
-    <%= f.label :task_name %>
-    <%= f.text_area :task_name %>
+    <%= f.label :prayer_or_meditations %>
+    <%= f.text_area :prayer_or_meditations %>
 
     <br>
      <br>
 
-     <%= f.label :prayer %>
-    <%= f.text_area :prayer%>
+     <%= f.label :exercise_plan %>
+    <%= f.text_area :exercise_plan %>
 
  <br>
   <br>
-     <%= f.label :exercise %>
-    <%= f.text_field :exercise %>
-
- <br>
-  <br>
-
-     <%= f.label :supplements %>
-    <%= f.text_area :supplements %>
+     <%= f.label :stretch_plan %>
+    <%= f.text_field :stretch_plan %>
 
  <br>
   <br>
 
-     <%= f.label :daily_plan %>
-    <%= f.text_area :daily_plan %>
+     <%= f.label :three_superfoods_to_add_to_my_meals %>
+    <%= f.text_area :three_superfoods_to_add_to_my_meals %>
 
  <br>
   <br>
 
-     <%= f.label :stretch %>
-    <%= f.text_field :stretch %>
-
-
- <br>
+     <%= f.label :emotional_scale %>
+    <%= f.text_field :emotional_scale %>
+<br>
   <br>
 
-     <%= f.label :diet %>
-    <%= f.text_area :diet %>
-
- <br>
+     <%= f.label :tasks_completed %>
+    <%= f.text_field :tasks_completed %>
+<br>
   <br>
 
+     <%= f.label :went_well_tips %>
+    <%= f.text_field :went_well_tips %>
+<br>
+  <br>
+
+     <%= f.label :bad_tips %>
+    <%= f.text_field :bad_tips %>
+ <br>
+  <br>
 
     <%= f.hidden_field :user_id, :value => current_user.id %>
 

@@ -1,6 +1,18 @@
+<head>
+<style>
+body {background-color: khaki;}
 
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
 
-<h1> Edit Comment: </h1>
+}
+</style>
+</head>
+<body>
+
+<h2> Edit Comment. </h2>
 
 <%= render partial: "layouts/errors", locals: {object: @comment} %>
 
@@ -17,3 +29,8 @@
     <%= f.submit 'Save Changes'%>
 
     <% end %>
+
+    <% if current_user == @comment.user %> 
+    <%= button_to "Delete Comment", comment_path(@comment), method: :delete  %>
+<br> 
+  <% end %>

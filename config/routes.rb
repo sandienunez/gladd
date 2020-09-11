@@ -17,8 +17,8 @@ Rails.application.routes.draw do
 
   #daily_checkin_task_path
   #or 
-resources :daily_routines do
-  resources :tasks, only: [:index, :new, :create, :show] #build 3 nested routes
+resources :tasks do
+  resources :comments, only: [:index, :new, :create, :show] #build 3 nested routes
 end
 
 

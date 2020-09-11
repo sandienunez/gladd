@@ -1,15 +1,30 @@
-<h1>Comment:  </h1>
-<ul>
-<li><h3><%= @comment.message %></li></h3>
+<head>
+<style>
+body {background-color: khaki;}
+
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+</style>
+</head>
+<body>
+
+
+<h2>Comment:  </h2>
+
+<h2><%= @comment.message %></h2>
  
  <li> Created by: <%= current_user.full_name %></li>
  <br>
- <li>For this task: <%= link_to @comment.task.task_name, task_path(@comment.task_id) if @comment.task %><li> 
+<p>For this task: <%= link_to @comment.task.task_name, task_path(@comment.task_id) if @comment.task %></p>
  <br>
 <% if @comment.user == current_user %>
     <%= button_to "Edit Comment", edit_comment_path(@comment), method: :get %>
 <% end %> 
-</ul>
+
 
 
 
