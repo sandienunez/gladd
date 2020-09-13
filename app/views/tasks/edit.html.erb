@@ -14,29 +14,51 @@ h2 {
 </head>
 <body>
 
-<h1> Edit Task. </h1>
+<h2> Edit Task. </h2>
 <ul>
 
 <%= form_for(@task) do |f| %>
 
   <%= f.label :task_name %>
+  <br>
+  <br>
     <%= f.text_area :task_name %>
 
     <br>
   <br>
 
-     <%= f.label :action_one %>
-    <%= f.text_area :action_one %>
+  <h2>3 actions to help you finish this task.</h2>
+<%= label_tag("Please check off these actions in the edit view when you complete them.") %>
+<br>
 
+<%= check_box_tag(:action_one) %>
+<%= label_tag(:action_one, "Action 1:") %> <%= @task.action_one %>
+<br>
+<%= check_box_tag(:action_two) %>
+<%= label_tag(:action_two, "Action 2:") %> <%=  @task.action_two %>
+<br>
+<%= check_box_tag(:action_three) %> 
+<%= label_tag(:action_three, "Action 3:") %> <%=  @task.action_three %>
+<br>
+<br>
+
+   <%= f.label :action_one %>
+   <br>
+    <%= f.text_area :action_one %>
  <br>
   <br>
      <%= f.label :action_two %>
+     <br>
     <%= f.text_field :action_two %>
 
  <br>
   <br>
      <%= f.label :action_three %>
+     <br>
     <%= f.text_area :action_three %>
+
+ <br>
+  <br>
 
 <%= f.label :date %>
 <%= f.date_select :date, {

@@ -294,4 +294,95 @@ end
 <p> <%= current_user.full_name %> says </p>
        
                 <td><h4><%= @comment.message %></h4></td>
-        
+--------------
+
+
+<strong>Action 1:</strong>  <%= @task.action_one %>
+<br>
+<br>
+  <strong>Action 2:</strong>  <%= @task.action_two %>
+<br>
+<br>
+<strong>Action 3:</strong>  <%= @task.action_three %>
+<br>
+<br>
+<strong>Date task was created:</strong>  <%=  @task.date %>
+<br>
+<br>
+ <strong>Deadline: </strong>
+  <br>
+<br>
+ <strong> Time it will take to finish: </strong>
+<br>
+<br>
+<br>  
+ <% if @task.user == current_user %>    
+<%= button_to "Edit Task", edit_task_path, method: :get %> 
+<br>  
+<%= button_to "Delete Task", task_path(@task), method: :delete, data: {confirm: "Are you sure you want to delete this task?"} %>
+<br> 
+<% end %> 
+<%= button_to "Add Comment", new_comment_path, method: :get %>
+
+<br>  
+</div>
+
+<h2>Comments: </h2>
+    <% @task.comments.each do |comment| %>
+     <br>   
+     <strong><%= current_user.full_name  %>  </strong><%= comment.message %>  
+                <br>   
+    <% if comment.user == current_user %>
+    <%= button_to "Edit Comment", edit_comment_path(comment), method: :get %>
+    <%= button_to "Delete Comment", comment_path(comment), data: {confirm: "Are you sure you want to delete this task?"}, method: :delete  %>
+
+<% end %> 
+ <% end %>
+</ul>
+
+
+--------------------------------------
+<br>
+  <br>
+  </div>
+  <h2> A.D.D Journal. </h2>
+<h4>Instructions: Next to each row, fill out each part in the space provided.</h4>
+
+     <%= f.label :emotional_scale %>
+      <br>
+    <%= f.text_field :emotional_scale %>
+<br>
+  <br>
+
+     <%= f.label :tasks_completed %>
+      <br>
+    <%= f.text_area :tasks_completed %>
+<br>
+  <br>
+     <%= f.label :went_well_tips %>
+      <br>
+    <%= f.text_area :went_well_tips %>
+<br>
+  <br>
+
+     <%= f.label :bad_tips %>
+      <br>
+    <%= f.text_area :bad_tips %>
+ <br>
+  <br>
+
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+
+    <%= f.submit %>
+   
+    <% end %>
+  
+    </ul>
+
+
+         
+
+
+ 
+
+    

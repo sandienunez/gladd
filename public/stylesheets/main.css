@@ -59,4 +59,16 @@ h2 strong {
     padding: 20px;
   }
   
+  .container {
+    width: 500px;
+    clear: both;
+  }
   
+  .container input {
+    width: 100%;
+    clear: both;
+  }
+
+  .styleform label {float:left;}
+.styleform input {margin-left:200px;} /* this gives space for the label on the left */
+.styleform .clear {clear:both;} /* prevent elements from stacking weirdly */

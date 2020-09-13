@@ -4,10 +4,10 @@ class Task < ApplicationRecord
 
    #when we call scope we get = ActiveRecord::Relation object
    belongs_to :user, optional: true 
-   belongs_to :daily_routine, optional: true 
+   belongs_to :daily_routine, optional: true #NOT TRUE SHOULD I DELETE THIS? CAN IT STILL MEET REQUIREMENT?
    has_many :comments, dependent: :destroy
    has_many :users, through: :comments #ppl who have commented on it
-   # validates :task_name, :action_one, :action_two, :action_three, :date, :priority_ranking, presence: true 
+   validates :task_name, :action_one, :action_two, :action_three, :date, :priority_ranking, presence: true 
    validate :limit_number_of_tasks
 
    def limit_number_of_tasks

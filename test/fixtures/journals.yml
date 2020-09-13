@@ -1,0 +1,85 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  focus: 1
+  organization: 1
+  impulse_control: 1
+  worry: 1
+  mood: 1
+  temper_control: 1
+  memory: 1
+  anxiety: 1
+  sleep: 1
+  other: 1
+  notes: MyText
+  reminders: MyText
+  3_things_i_am_grateful_for: MyText
+  negative_thoughts: MyText
+  challenges: MyText
+  breakfast: MyString
+  snack_one: MyString
+  lunch: MyString
+  snack_two: MyString
+  dinner: MyString
+  healthy: false
+  how_did_i_feel_after: MyText
+  time_eaten: 2020-09-13 14:39:15
+  brain_health: MyString
+  physical_health: MyString
+  emotional_health: MyString
+  thinking_patterns: MyString
+  spouse: MyString
+  children_string: MyString
+  family_and_friends: MyString
+  work: MyString
+  school: MyString
+  money: MyString
+  spiritual_life: MyString
+  character: MyString
+  passions: MyString
+  community_service: MyString
+  giving_to_charity: MyString
+  word_of_day: MyString
+  bible_verse_of_day: MyString
+
+two:
+  focus: 1
+  organization: 1
+  impulse_control: 1
+  worry: 1
+  mood: 1
+  temper_control: 1
+  memory: 1
+  anxiety: 1
+  sleep: 1
+  other: 1
+  notes: MyText
+  reminders: MyText
+  3_things_i_am_grateful_for: MyText
+  negative_thoughts: MyText
+  challenges: MyText
+  breakfast: MyString
+  snack_one: MyString
+  lunch: MyString
+  snack_two: MyString
+  dinner: MyString
+  healthy: false
+  how_did_i_feel_after: MyText
+  time_eaten: 2020-09-13 14:39:15
+  brain_health: MyString
+  physical_health: MyString
+  emotional_health: MyString
+  thinking_patterns: MyString
+  spouse: MyString
+  children_string: MyString
+  family_and_friends: MyString
+  work: MyString
+  school: MyString
+  money: MyString
+  spiritual_life: MyString
+  character: MyString
+  passions: MyString
+  community_service: MyString
+  giving_to_charity: MyString
+  word_of_day: MyString
+  bible_verse_of_day: MyString

@@ -15,7 +15,7 @@ class TasksController < ApplicationController
     end
 
     def create
-        binding.pry
+        # binding.pry
         @task = Task.new(task_params)
         if @task.save
             redirect_to task_path(@task)
@@ -37,18 +37,21 @@ class TasksController < ApplicationController
 
     def update
         set_task
-        current_user.id == @task.user_id 
-        if @task.update(task_params)
+        if @task.update(task_params) && current_user.id == @task.user_id  #if return value doesnt save = returns false
             redirect_to task_path(@task)
+            # @task.errors.full_messages
+        # else 
+        #     # raise params.inspect
+        #   redirect_to tasks_path
+
         end
     end
 
     def destroy
         set_task
-        if current_user.id == @task.user_id 
-            @task.destroy 
-        end
+        if @task.destroy && current_user.id == @task.user_id  #if return value doesnt save = returns false
             redirect_to tasks_path 
+        end
     end
 
     private
@@ -63,7 +66,7 @@ class TasksController < ApplicationController
 
     def task_params
         # binding.pry
-        params.require(:task).permit(:date, :"date(2i)", :priority_ranking, :task_name, :action_one, :action_two, :action_three, :user_id)
+        params.require(:task).permit(:date, :"date(2i)", :priority_ranking, :task_name, :action_one, :action_two, :action_three, :deadline, :estimate_time_to_finish_task, :user_id)
     end
 
     #add destroy for delete button link_to

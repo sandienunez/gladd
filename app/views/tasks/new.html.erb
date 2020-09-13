@@ -23,29 +23,7 @@ h2 {
 
 
 <%= form_for(@task) do |f| %>
-
-    <%= f.label :task_name %>
-    <%= f.text_area :task_name %>
-    <br>
-  <br>
-
-     <%= f.label :action_one %>
-    <%= f.text_area :action_one %>
-
- <br>
-  <br>
-     <%= f.label :action_two %>
-    <%= f.text_field :action_two %>
-
- <br>
-  <br>
-     <%= f.label :action_three %>
-    <%= f.text_area :action_three %>
-
-<br>
-  <br>
-
-<%= f.label :date %>
+<p><%= f.label :date %>:
 <%= f.date_select :date, {
             order: [:month, :day, :year],
             date_separator: "/",
@@ -54,11 +32,45 @@ h2 {
                 day: 'dd',
                 year: 'yyyy',
             },
-         } %>
+         } %></p>
+
+   <p><%= f.label :task_name %>:</p>
+    <%= f.text_area :task_name %>
+    <br>
+  <h3>3 actions to help you finish this task.</h3>
+<%= label_tag("Please check off these actions when you complete them.") %><br>
+<br>
+
+<%= check_box_tag(:action_one) %>
+<%= label_tag(:action_one, "Action 1") %> <%=  @task.action_one %>
+<br>
+<%= check_box_tag(:action_two) %>
+<%= label_tag(:action_two, "Action 2") %> <%=  @task.action_two %>
+<br>
+<%= check_box_tag(:action_three) %> 
+<%= label_tag(:action_three, "Action 3") %> <%=  @task.action_three %>
+<br>
+
+
+
+        <p><%= f.label :action_one %>:</p>
+    <%= f.text_area :action_one %>
+
+     <p><%= f.label :action_two %>:</p>
+    <%= f.text_area :action_two %>
+
  <br>
   <br>
-
-    <%= f.label :priority_ranking %>
+     <p><%= f.label :action_three %>:</p>
+    <%= f.text_area :action_three %>
+   <h2><%= f.label :priority_ranking %>.</h2>
+<h3>Order this task from Highest to Lowest Priority below. </h3>
+<p> 6 = Highest Priority (Task needs to be completed right now, MOST important)</p>
+<p> 5 = Highest Priority (Task needs to be completed today BUT can wait until later today, extra important)</p>
+<p> 4 = Lowest Priority (Task needs to be finished by tomorrow, very important)</p>
+<p> 3 = Lowest Priority (Task will be completed in the next 2 days, pretty important)</p>
+<p> 2 = Lowest Priority (Task should be done this week if possible, not as pressing)</p>
+<p> 1 = Lowest Priority (Task can be done by next week, not urgent at all)</p>
    <%= f.select :priority_ranking, options_for_select(1..6), { prompt: "Please Choose a ranking, 1 = not urgent and 6 = ULTRA important!" } %>
     <br>
      <br>

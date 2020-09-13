@@ -1,3 +1,83 @@
-<%= render 'layouts/nav' %>
 
+<%= render partial: "layouts/errors", locals: {object: @daily_routine} %>
+
+<head>
+<style>
+body {background-color: khaki;}
+
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+h4 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+</style>
+</head>
+<body>
+<ul>
+<h2> Edit Daily Routine. </h2>
+ <div class="container">
+
+<%= form_for(@daily_routine) do |f| %>
+
+<%= f.label :date %>
+<%= f.date_select :date, {
+            order: [:month, :day, :year],
+            date_separator: "/",
+            prompt: {
+                month: 'mm',
+                day: 'dd',
+                year: 'yyyy',
+            },
+         } %>
+ <br>
+  <br>
+
+    <%= f.label :daily_plan %>
+    <br>
+ <%= f.text_area :daily_plan %>
+ <br>
+  <br>
+    <%= f.label :prayer_or_meditations %>
+        <br>
+    <%= f.text_area :prayer_or_meditations %>
+
+    <br>
+     <br>
+
+     <%= f.label :exercise_plan %>
+         <br>
+    <%= f.text_area :exercise_plan %>
+
+ <br>
+  <br>
+     <%= f.label :stretch_plan %>
+         <br>
+    <%= f.text_area :stretch_plan %>
+ <br>
+  <br>
+     <%= f.label :three_superfoods_to_add_to_my_meals %>
+         <br>
+    <%= f.text_area :three_superfoods_to_add_to_my_meals %>
+
+ <br>
+  <br>
+  </div>
+
+ <br>
+  <br>
+
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+
+    <%= f.submit "Save Changes" %>
+   
+    <% end %>
+  
+    </ul>
 

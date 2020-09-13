@@ -1,12 +1,19 @@
 <nav>
     <ul>
     <div style="text-align: right;">
-      <%= link_to "Home", root_path %></li>
+      <%= link_to "Home", root_path %>
+               <br>
         <% if user_signed_in? %>
-           <%= link_to "Add a Task", new_task_path %>
+           <%= link_to "Create Task", new_task_path %>
+           <br>
             <%= link_to "Daily Tasks", tasks_path %>
-            <%= link_to "All Comments", comments_path %>
-            <%= link_to "Add a Daily Routine", new_daily_routine_path %>
+                     <br>
+            <%= link_to "Comment Feed", comments_path %>
+                     <br>
+            <%= link_to "Create Daily Routine", new_daily_routine_path %>
+                     <br>
+              <%= link_to "Daily Routines", daily_routines_path %>
+                     <br>
            <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
             <!--destroy_user_session_path= devise route = deletes request to sign out user 
             -don't forget to send method as well -->

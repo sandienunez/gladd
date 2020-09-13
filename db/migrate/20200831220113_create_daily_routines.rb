@@ -7,10 +7,7 @@ class CreateDailyRoutines < ActiveRecord::Migration[6.0]
       t.text :exercise_plan
       t.text :stretch_plan
       t.text :three_superfoods_to_add_to_my_meals
-      t.integer :emotional_scale
-      t.boolean :tasks_completed
-      t.string :went_well_tips
-      t.string :bad_tips
+      t.date :date
 
       t.timestamps
     end

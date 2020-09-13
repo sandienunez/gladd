@@ -1,14 +1,31 @@
-<%= render 'layouts/nav' %>
 
+<%= render partial: "layouts/errors", locals: {object: @daily_routine} %>
 
+<head>
+<style>
+body {background-color: khaki;}
 
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+h4 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+</style>
+</head>
+<body>
 <ul>
-<h1> Plan your Daily Routine here! </h1>
-<h3>Instructions: Next to each row, fill out each part in the space provided.  </h3>
-
+<h2> Plan your Daily Routine. </h2>
+<h4>Instructions: Next to each row, fill out each part in the space provided.</h4>
+ <div class="container">
 
 <%= form_for(@daily_routine) do |f| %>
-
 
 <%= f.label :date %>
 <%= f.date_select :date, {
@@ -22,58 +39,40 @@
          } %>
  <br>
   <br>
-
     <%= f.label :daily_plan %>
+    <br>
  <%= f.text_area :daily_plan %>
  <br>
   <br>
     <%= f.label :prayer_or_meditations %>
+        <br>
     <%= f.text_area :prayer_or_meditations %>
 
     <br>
      <br>
 
      <%= f.label :exercise_plan %>
+         <br>
     <%= f.text_area :exercise_plan %>
 
  <br>
   <br>
      <%= f.label :stretch_plan %>
-    <%= f.text_field :stretch_plan %>
-
+         <br>
+    <%= f.text_area :stretch_plan %>
  <br>
   <br>
-
      <%= f.label :three_superfoods_to_add_to_my_meals %>
+         <br>
     <%= f.text_area :three_superfoods_to_add_to_my_meals %>
 
  <br>
-  <br>
-
-     <%= f.label :emotional_scale %>
-    <%= f.text_field :emotional_scale %>
-<br>
-  <br>
-
-     <%= f.label :tasks_completed %>
-    <%= f.text_field :tasks_completed %>
-<br>
-  <br>
-
-     <%= f.label :went_well_tips %>
-    <%= f.text_field :went_well_tips %>
-<br>
-  <br>
-
-     <%= f.label :bad_tips %>
-    <%= f.text_field :bad_tips %>
- <br>
-  <br>
 
     <%= f.hidden_field :user_id, :value => current_user.id %>
 
     <%= f.submit %>
-
+   
     <% end %>
-
+  
     </ul>
+

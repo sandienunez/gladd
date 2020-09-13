@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :comments
   resources :tasks
+  resources :journals
   resources :daily_routines
 
   #nested resources = treat instances of models as URLs, and is key to using resourceful style
