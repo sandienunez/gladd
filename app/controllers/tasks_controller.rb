@@ -3,11 +3,6 @@ class TasksController < ApplicationController
     def new
         # binding.pry
         @task = Task.new
-        #below only needed if you were adding comment feature to task edit page
-    # @comment = Comment.find_by_id(params[:id])
-    # @comment = current_user.comments.build
-
-    #  @comment = @task.comments.build
     end 
 
     def index 
@@ -28,7 +23,7 @@ class TasksController < ApplicationController
         # binding.pry
         set_task
         @comment = Comment.find_by_id(params[:id])
-        @comment = @task.comments
+        # @comment = @task.comments
     end
 
     def edit
@@ -39,11 +34,8 @@ class TasksController < ApplicationController
         set_task
         if @task.update(task_params) && current_user.id == @task.user_id  #if return value doesnt save = returns false
             redirect_to task_path(@task)
-            # @task.errors.full_messages
-        # else 
-        #     # raise params.inspect
-        #   redirect_to tasks_path
-
+        else 
+          redirect_to edit_task_path
         end
     end
 

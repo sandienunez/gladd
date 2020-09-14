@@ -50,6 +50,6 @@ class CommentsController <  ApplicationController
     private
 
     def comment_params
-        params.require(:comment).permit(:message, :task_id)
+        params.require(:comment).permit(:message, :task_id, :daily_routine_id, :journal_id)
     end
 end

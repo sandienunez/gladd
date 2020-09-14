@@ -19,6 +19,7 @@ class DailyRoutinesController < ApplicationController
 
     def show
         @daily_routine = DailyRoutine.find_by_id(params[:id])
+        @comment = Comment.find_by_id(params[:id])
     end
 
     def index 
@@ -45,7 +46,7 @@ class DailyRoutinesController < ApplicationController
     private
 
     def daily_routine_params
-        params.require(:daily_routine).permit(:date, :"date(2i)", :daily_plan, :prayer_or_meditations, :exercise_plan, :stretch_plan, :three_superfoods_to_add_to_my_meals, :emotional_scale, :tasks_completed, :went_well_tips, :bad_tips, :user_id)
+        params.require(:daily_routine).permit(:date, :"date(2i)", :daily_plan, :prayer_or_meditations, :exercise_plan, :stretch_plan, :three_superfoods_to_add_to_my_meals, :user_id)
     end
 
 

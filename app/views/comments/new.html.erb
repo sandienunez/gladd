@@ -26,6 +26,22 @@ h2 {
     <% end %>
 <br>
 <br>
+     <% if !@comment.daily_routine %>
+    <%= f.label :daily_plan %>:
+     <%= f.collection_select :daily_routine_id, DailyRoutine.all, :id, :daily_plan %>
+     <% else %>
+    <%= f.hidden_field :daily_routine_id %>
+    <% end %>
+    <br>
+<br>
+     <% if !@comment.journal %>
+    <%= f.label :date %>:
+     <%= f.collection_select :journal_id, Journal.all, :id, :date %>
+     <% else %>
+    <%= f.hidden_field :journal_id %>
+    <% end %>
+    <br>
+    <br>
      <%= f.label :message %>
      <%= f.text_area :message %>
 <br>

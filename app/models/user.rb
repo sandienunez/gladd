@@ -6,6 +6,7 @@ class User < ApplicationRecord
   #rename relationship and still have access to them 
   has_many :tasks #that user has created 
   has_many :daily_routines, through: :tasks #check about this 
+  has_many :journals 
   validates :email, uniqueness: true, presence: true  
   validates_presence_of :full_name
   #has_secure_password not needed bc of devise 

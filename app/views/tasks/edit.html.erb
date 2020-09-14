@@ -71,8 +71,22 @@ h2 {
             },
          } %>
  <br>
-  <br>
+   <p><%= f.label :deadline %>:
+<%= f.date_select :deadline, {
+            order: [:month, :day, :year],
+            date_separator: "/",
+            prompt: {
+                month: 'mm',
+                day: 'dd',
+                year: 'yyyy',
+            },
+         } %></p>
+<br>
+ <p><%= f.label :estimate_time_to_finish_task %>: write how many hours and/or minutes it will take to complete this task</p>
+    <%= f.text_area :estimate_time_to_finish_task %>
 
+<br>
+<br>
     <%= f.label :priority_ranking %>
    <%= f.select :priority_ranking, options_for_select(1..6), { prompt: "Please Choose a ranking, 1 = not urgent and 6 = ULTRA important!" } %>
     <br>

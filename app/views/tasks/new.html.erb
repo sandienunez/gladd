@@ -50,9 +50,6 @@ h2 {
 <%= check_box_tag(:action_three) %> 
 <%= label_tag(:action_three, "Action 3") %> <%=  @task.action_three %>
 <br>
-
-
-
         <p><%= f.label :action_one %>:</p>
     <%= f.text_area :action_one %>
 
@@ -63,6 +60,22 @@ h2 {
   <br>
      <p><%= f.label :action_three %>:</p>
     <%= f.text_area :action_three %>
+<br>
+    <p><%= f.label :deadline %>:
+<%= f.date_select :deadline, {
+            order: [:month, :day, :year],
+            date_separator: "/",
+            prompt: {
+                month: 'mm',
+                day: 'dd',
+                year: 'yyyy',
+            },
+         } %></p>
+<br>
+ <p><%= f.label :estimate_time_to_finish_task %>: choose how many hours and/or minutes it will take to complete this task</p>
+    <%= f.text_area :estimate_time_to_finish_task %>
+
+
    <h2><%= f.label :priority_ranking %>.</h2>
 <h3>Order this task from Highest to Lowest Priority below. </h3>
 <p> 6 = Highest Priority (Task needs to be completed right now, MOST important)</p>

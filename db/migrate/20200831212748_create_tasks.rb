@@ -7,7 +7,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.text :action_two
       t.text :action_three
       t.date :deadline
-      t.time :estimate_time_to_finish_task
+      t.string :estimate_time_to_finish_task
 
 
       

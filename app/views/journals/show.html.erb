@@ -1,0 +1,109 @@
+
+<head>
+<style>
+body {background-color: khaki;}
+
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+</style>
+</head>
+<body>
+
+
+<h2> Daily Journal.  </h2>
+<h2>------------------------> <%= @journal.word_of_day %> <----------------------------</h2>
+<div style="text-align: left;">
+<h3>Date Journal was made:</h3>  <%=  @journal.date %>
+<br>
+<br>
+<h3>Bible verse of the day:</h3><%= @journal.bible_verse_of_day %>
+<h3>Focus:</h3><%= @journal.focus %>
+<h3>Organization:</h3><%= @journal.organization %>
+<h3>Impulse Control:</h3><%= @journal.impulse_control %>
+<h3>Worry:</h3><%= @journal.worry %>
+<h3>Mood:</h3><%= @journal.mood %>
+<h3>Temper Control:</h3><%= @journal.temper_control %>
+<h3>Memory:</h3><%= @journal.memory %>
+<h3>Anxiety:</h3><%= @journal.anxiety %>
+<h3>Sleep</h3><%= @journal.sleep %>
+<h3>Other:</h3><%= @journal.other %>
+
+
+<h3>Write down any notes for the day :</h3><%= @journal.notes %>
+<h3>Write down any reminders for the day:</h3><%= @journal.reminders %>
+<h3>3 Things I am Grateful for today:</h3><%= @journal.three_things_i_am_grateful_for %>
+<h3>Write down any negative thoughts that are not true :</h3>
+<h3>Negative thoughts:</h3><%= @journal.negative_thoughts %>
+<h3>Write down any challenges you faced today and how you overcame them:</h3>
+
+<h3>Challenges</h3><%= @journal.challenges %>
+<br>
+<h3>Write down what you ate for each meal and how it made you feel:</h3>
+
+<h3>Breakfast:</h3><%= @journal.breakfast %>
+<h3>Snack one:</h3><%= @journal.snack_one %>
+<h3>Lunch:</h3><%= @journal.lunch %>
+<h3>Snack two:</h3><%= @journal.snack_two%>
+<h3>Dinner:</h3><%= @journal.dinner %>
+<h3>Was this a healthy meal? </h3><%= @journal.healthy %>
+<h3>How did I feel after I ate this meal:</h3><%= @journal.how_did_i_feel_after %>
+<h3>What time was this meal eaten:</h3><%= @journal.time_eaten %>
+
+<h3> Below, fill out what is most important to you in these areas. Write what you want for each goal and what you do not want for each goal.</h3>
+<br>
+<h2>Biological Goals:</h2>
+<h3>Brain Health:</h3><%= @journal.brain_health %>
+<h3>Physical Health: </h3><%= @journal.physical_health %>
+<br>
+<h2>Psychological Goals:</h2>
+
+<h3>Emotional Health: </h3><%= @journal.emotional_health%>
+<h3>Thinking Patterns: </h3><%= @journal.thinking_patterns %>
+<br>
+<h2>Social Goals:</h2>
+
+<h3>Spouse/Partner: </h3><%= @journal.spouse %>
+<h3>Children:</h3><%= @journal.children %>
+<h3>Family & Friends:</h3><%= @journal.family_and_friends %>
+<h3>Work:</h3><%= @journal.work%>
+<h3>School:</h3><%= @journal.school %>
+<h3>Money:</h3><%= @journal.money %>
+<br>
+
+<h2>Spiritual Goals:</h2>
+
+<h3>Spiritual Life:</h3><%= @journal.spiritual_life %>
+<h3>Character:</h3><%= @journal.character %>
+<h3>Passions:</h3><%= @journal.passions %>
+<h3>Community Service:</h3><%= @journal.community_service %>
+<h3>Giving to Charity:</h3><%= @journal.giving_to_charity %>
+
+
+
+<h2>Comments. </h2>
+    <% @journal.comments.each do |comment| %>
+     <br>   
+     <strong><%= current_user.full_name  %>  </strong><%= comment.message %>  
+                <br>   
+    <% if comment.user == current_user %>
+    <br>
+    <%= button_to "Edit Comment", edit_comment_path(comment), method: :get %>
+    <br>
+    <%= button_to "Delete Comment", comment_path(comment), data: {confirm: "Are you sure you want to delete this task?"}, method: :delete  %>
+
+<% end %> 
+ <% end %>
+</ul>
+
+
+
+         
+
+
+ 
+
+    

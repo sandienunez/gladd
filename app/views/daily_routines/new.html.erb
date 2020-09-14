@@ -22,7 +22,7 @@ h4 {
 <body>
 <ul>
 <h2> Plan your Daily Routine. </h2>
-<h4>Instructions: Next to each row, fill out each part in the space provided.</h4>
+<h3>Instructions: Next to each row, fill out each part in the space provided.</h3>
  <div class="container">
 
 <%= form_for(@daily_routine) do |f| %>
@@ -67,9 +67,10 @@ h4 {
     <%= f.text_area :three_superfoods_to_add_to_my_meals %>
 
  <br>
+ <br>
 
     <%= f.hidden_field :user_id, :value => current_user.id %>
-
+<br>
     <%= f.submit %>
    
     <% end %>

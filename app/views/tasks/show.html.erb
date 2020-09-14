@@ -17,11 +17,17 @@ h2 {
 <h2> Task.  </h2>
 <h2>------------------------> <%= @task.task_name %> <----------------------------</h2>
 <div style="text-align: left;">
-<h3>Date task was created:</h3>  <%=  @task.date %>
+<h3>Date task was created:</h3>  <%=  @task.date  %>
+
 <br>
 <br>
 <h3>Priority Ranking:</h3><%= @task.priority_ranking %>
-
+<p> 6 = Highest Priority (Task needs to be completed right now, MOST important)</p>
+<p> 5 = Highest Priority (Task needs to be completed today BUT can wait until later today, extra important)</p>
+<p> 4 = Lowest Priority (Task needs to be finished by tomorrow, very important)</p>
+<p> 3 = Lowest Priority (Task will be completed in the next 2 days, pretty important)</p>
+<p> 2 = Lowest Priority (Task should be done this week if possible, not as pressing)</p>
+<p> 1 = Lowest Priority (Task can be done by next week, not urgent at all)</p>
 <h3>3 actions to help you finish this task.</h3>
 <%= label_tag("Please check off these actions when you complete them.") %>
 <br>
@@ -37,10 +43,12 @@ h2 {
 <br>
 <br>
 
- <h3>Deadline: </h3>
+ <h3>Deadline: </h3> <%=  @task.deadline %>
   <br>
 <br>
- <h3> Estimate Time to finish task: </h3>
+
+ <h3> Estimate Time to finish task: </h3> <%=  @task.estimate_time_to_finish_task %>
+<br>
 <br>
 
  <% if @task.user == current_user %>    

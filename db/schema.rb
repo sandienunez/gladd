@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 2020_09_13_183915) do
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "task_id"
+    t.integer "daily_routine_id"
+    t.integer "journal_id"
     t.string "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -33,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_09_13_183915) do
   end
 
   create_table "journals", force: :cascade do |t|
+    t.integer "user_id"
     t.date "date"
     t.integer "focus"
     t.integer "organization"
@@ -85,7 +88,7 @@ ActiveRecord::Schema.define(version: 2020_09_13_183915) do
     t.text "action_two"
     t.text "action_three"
     t.date "deadline"
-    t.time "estimate_time_to_finish_task"
+    t.string "estimate_time_to_finish_task"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "priority_ranking"
