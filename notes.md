@@ -382,7 +382,367 @@ end
 
          
 
+---------------------------------new comment view
+
+<head>
+<style>
+body {background-color: khaki;}
+
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+</style>
+</head>
+<body>
+
+<h2> Create a Comment. </h2>
+
+<%= render partial: "layouts/errors", locals: {object: @comment} %>
+
+<%= form_for @comment do |f| %>
+
+     <% if !@comment.task %>
+    <%= f.label :task_name %>
+     <%= f.collection_select :task_id, Task.all, :id, :task_name %>
+     <% else %>
+    <%= f.hidden_field :task_id %>
+    <% end %>
+<br>
+<br>
+     <% if !@comment.daily_routine %>
+    <%= f.label :daily_plan %>:
+     <%= f.collection_select :daily_routine_id, DailyRoutine.all, :id, :daily_plan %>
+     <% else %>
+    <%= f.hidden_field :daily_routine_id %>
+    <% end %>
+    <br>
+<br>
+     <% if !@comment.journal %>
+    <%= f.label :date %>:
+     <%= f.collection_select :journal_id, Journal.all, :id, :date %>
+     <% else %>
+    <%= f.hidden_field :journal_id %>
+    <% end %>
+    <br>
+    <br>
+     <%= f.label :message %>
+     <%= f.text_area :message %>
+<br>
+<br>
+    <%= f.submit %>
+
+    <% end %>
+ 
+ ----------------------------index comment view
+
+ <head>
+<style>
+body {background-color: khaki;}
+
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+</style>
+</head>
+<body>
+
+<h2>Comment Feed. </h2>
+
+<ul>
+    <% @comments.each do |comment| %>
+<br>
+
+  <li><%= comment.user.full_name %>  commented "<%= link_to comment.message, comment_path(comment) %>" for this Task: <%= link_to comment.task.task_name, task_path(comment.task_id) if comment.task %></li>
+    <li><%= comment.user.full_name %>  commented "<%= link_to comment.message, comment_path(comment) %>" for this Daily Routine: <%= link_to comment.daily_routine.daily_plan, daily_routine_path(comment.daily_routine_id) if comment.daily_routine %></li>
+      <li><%= comment.user.full_name %>  commented "<%= link_to comment.message, comment_path(comment) %>" for this Daily Journal: <%= link_to comment.journal.date, journal_path(comment.journal_id) if comment.journal %></li>
+
+
+<br>
+<% if current_user == comment.user %> 
+    <%= button_to "Edit Comment", edit_comment_path(comment), method: :get  %> 
+    <%= button_to "Delete Comment", comment_path(comment), data: {confirm: "Are you sure you want to delete this task?"}, method: :delete  %>
+<br> 
+  <% end %>
+<% end %>
+</ul>
+
+-----------------show comment view
+
+<head>
+<style>
+body {background-color: khaki;}
+
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+</style>
+</head>
+<body>
+
+
+<h2>Comment:  </h2>
+
+<h2><%= @comment.message %></h2>
+ 
+ <li> Created by: <%= current_user.full_name %></li>
+ <br>
+<p>For this task: <%= link_to @comment.task.task_name, task_path(@comment.task_id) if @comment.task %></p>
+ <br>
+ <p>For this daily routine: <%= link_to @comment.daily_routine.daily_plan, daily_routine_path(@comment.daily_routine_id) if @comment.daily_routine %></p>
+<br>
+<p>For this daily journal: <%= link_to @comment.journal.date, journal_path(@comment.journal_id) if @comment.journal %></p>
+<br>
+<% if @comment.user == current_user %>
+    <%= button_to "Edit Comment", edit_comment_path(@comment), method: :get %>
+<% end %> 
+
+
+------edit comment view
+
+<head>
+<style>
+body {background-color: khaki;}
+
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+</style>
+</head>
+<body>
+
+<h2> Edit Comment. </h2>
+
+<%= render partial: "layouts/errors", locals: {object: @comment} %>
+
+<%= form_for(@comment) do |f| %>
+
+    <%= f.label :task %>
+     <%= f.collection_select :task_id, Task.all, :user_id, :task_name %>
+<br>
+<br>
+     <%= f.label :daily_plan %>:
+     <%= f.collection_select :daily_routine_id, DailyRoutine.all, :id, :daily_plan %>
+     <br>
+     <br>
+     <%= f.label :date %>:
+     <%= f.collection_select :journal_id, Journal.all, :id, :date %>
+     <br>
+     <br>
+     <%= f.label :message %>
+     <%= f.text_area :message %>
+<br>
+<br>
+
+    <%= f.submit 'Save Changes'%>
+
+    <% end %>
+
+    <% if current_user == @comment.user %> 
+    <%= button_to "Delete Comment", comment_path(@comment), method: :delete  %>
+<br> 
+  <% end %>
+
+
+-------------------show daily routine
+
+<%= render 'layouts/nav' %>
+<head>
+<style>
+body {background-color: khaki;}
+
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+</style>
+</head>
+<body>
+
+
+<h2> Daily Routine.  </h2>
+
+<h2>------------------------> <%= @daily_routine.daily_plan %> <----------------------------</h2>
+<div style="text-align: left;">
+<h3>Date Daily Routine was made:</h3>  <%=  @daily_routine.date %>
+<br>
+<br>
+<h3>Prayer or Meditations:</h3><%= @daily_routine.prayer_or_meditations %>
+
+
+ <h3>Exercise Plan: <%=  @daily_routine.exercise_plan %>
+  <br>
+<br>
+ <h3> Stretch Plan: </h3> <%=  @daily_routine.stretch_plan %>
+<br>
+<br>
+ <h3> 3 Superfoods to add to my Meals: </h3> <%=  @daily_routine.three_superfoods_to_add_to_my_meals %>
+
+
+
+ <% if @daily_routine.user == current_user %>    
+<%= button_to "Edit Daily Routine", edit_daily_routine_path, method: :get %> 
+<br>  
+<%= button_to "Delete Daily Routine", daily_routine_path(@daily_routine), method: :delete, data: {confirm: "Are you sure you want to delete this daily routine?"} %>
+<br> 
+<% end %> 
+<%= button_to "Add Comment", new_comment_path, method: :get %>
+
+<br>  
+
+<h2>Comments. </h2>
+
+    <% @daily_routine.comments.each do |comment| %>
+     <br>   
+     <strong><%= current_user.full_name  %>  </strong><%= comment.message %>  
+                <br>   
+    <% if comment.user == current_user %>
+    <br>
+    <%= button_to "Edit Comment", edit_comment_path(comment), method: :get %>
+    <br>
+    <%= button_to "Delete Comment", comment_path(comment), data: {confirm: "Are you sure you want to delete this daily routine?"}, method: :delete  %>
+
+<% end %> 
+ <% end %>
+</ul>
+------------------show journal
+
+
+<head>
+<style>
+body {background-color: khaki;}
+
+h2 {
+  color: #619ce0;
+  font-family: arial;
+  font-size: 300%;
+
+}
+</style>
+</head>
+<body>
+
+
+<h2> Daily Journal.  </h2>
+<h2>------------------------> <%= @journal.word_of_day %> <----------------------------</h2>
+<div style="text-align: left;">
+<h3>Date Journal was made:</h3>  <%=  @journal.date %>
+<br>
+<br>
+<h3>Bible verse of the day:</h3><%= @journal.bible_verse_of_day %>
+<h3>Focus:</h3><%= @journal.focus %>
+<h3>Organization:</h3><%= @journal.organization %>
+<h3>Impulse Control:</h3><%= @journal.impulse_control %>
+<h3>Worry:</h3><%= @journal.worry %>
+<h3>Mood:</h3><%= @journal.mood %>
+<h3>Temper Control:</h3><%= @journal.temper_control %>
+<h3>Memory:</h3><%= @journal.memory %>
+<h3>Anxiety:</h3><%= @journal.anxiety %>
+<h3>Sleep</h3><%= @journal.sleep %>
+<h3>Other:</h3><%= @journal.other %>
+
+
+<h3>Write down any notes for the day :</h3><%= @journal.notes %>
+<h3>Write down any reminders for the day:</h3><%= @journal.reminders %>
+<h3>3 Things I am Grateful for today:</h3><%= @journal.three_things_i_am_grateful_for %>
+<h3>Write down any negative thoughts that are not true :</h3>
+<h3>Negative thoughts:</h3><%= @journal.negative_thoughts %>
+<h3>Write down any challenges you faced today and how you overcame them:</h3>
+
+<h3>Challenges</h3><%= @journal.challenges %>
+<br>
+<h3>Write down what you ate for each meal and how it made you feel:</h3>
+
+<h3>Breakfast:</h3><%= @journal.breakfast %>
+<h3>Snack one:</h3><%= @journal.snack_one %>
+<h3>Lunch:</h3><%= @journal.lunch %>
+<h3>Snack two:</h3><%= @journal.snack_two%>
+<h3>Dinner:</h3><%= @journal.dinner %>
+<h3>Was this a healthy meal? </h3><%= @journal.healthy %>
+<h3>How did I feel after I ate this meal:</h3><%= @journal.how_did_i_feel_after %>
+<h3>What time was this meal eaten:</h3><%= @journal.time_eaten %>
+
+<h3> Below, fill out what is most important to you in these areas. Write what you want for each goal and what you do not want for each goal.</h3>
+<br>
+<h2>Biological Goals:</h2>
+<h3>Brain Health:</h3><%= @journal.brain_health %>
+<h3>Physical Health: </h3><%= @journal.physical_health %>
+<br>
+<h2>Psychological Goals:</h2>
+
+<h3>Emotional Health: </h3><%= @journal.emotional_health%>
+<h3>Thinking Patterns: </h3><%= @journal.thinking_patterns %>
+<br>
+<h2>Social Goals:</h2>
+
+<h3>Spouse/Partner: </h3><%= @journal.spouse %>
+<h3>Children:</h3><%= @journal.children %>
+<h3>Family & Friends:</h3><%= @journal.family_and_friends %>
+<h3>Work:</h3><%= @journal.work%>
+<h3>School:</h3><%= @journal.school %>
+<h3>Money:</h3><%= @journal.money %>
+<br>
+
+<h2>Spiritual Goals:</h2>
+
+<h3>Spiritual Life:</h3><%= @journal.spiritual_life %>
+<h3>Character:</h3><%= @journal.character %>
+<h3>Passions:</h3><%= @journal.passions %>
+<h3>Community Service:</h3><%= @journal.community_service %>
+<h3>Giving to Charity:</h3><%= @journal.giving_to_charity %>
+
+<% if @journal.user == current_user %>    
+<%= button_to "Edit Journal", edit_journal_path, method: :get %> 
+<br>  
+<%= button_to "Delete Journal", journal_path(@journal), method: :delete, data: {confirm: "Are you sure you want to delete this journal?"} %>
+<br> 
+<% end %> 
+<%= button_to "Add Comment", new_comment_path, method: :get %>
+
+
+<h2>Comments. </h2>
+    <% @journal.comments.each do |comment| %>
+     <br>   
+     <strong><%= current_user.full_name  %>  </strong><%= comment.message %>  
+                <br>   
+
+    <% if comment.user == current_user %>
+  
+    <br>
+    <%= button_to "Edit Comment", edit_comment_path(comment), method: :get %>
+    <br>
+    <%= button_to "Delete Comment", comment_path(comment), data: {confirm: "Are you sure you want to delete this journal?"}, method: :delete  %>
+
+<% end %> 
+ <% end %>
+</ul>
+
+-----------------
+
+         
+
 
  
+
+    
+         
+
+
+ 
+
+    
 
     

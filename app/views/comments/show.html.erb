@@ -21,6 +21,7 @@ h2 {
  <br>
 <p>For this task: <%= link_to @comment.task.task_name, task_path(@comment.task_id) if @comment.task %></p>
  <br>
+<br>
 <% if @comment.user == current_user %>
     <%= button_to "Edit Comment", edit_comment_path(@comment), method: :get %>
 <% end %> 

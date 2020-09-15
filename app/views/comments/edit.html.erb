@@ -22,10 +22,12 @@ h2 {
      <%= f.collection_select :task_id, Task.all, :user_id, :task_name %>
 <br>
 <br>
+
      <%= f.label :message %>
      <%= f.text_area :message %>
 <br>
 <br>
+
     <%= f.submit 'Save Changes'%>
 
     <% end %>

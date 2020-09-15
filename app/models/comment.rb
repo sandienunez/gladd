@@ -4,6 +4,6 @@ class Comment < ApplicationRecord
     belongs_to :daily_routine, optional: true 
     belongs_to :journal, optional: true 
 validates :message, presence: true 
-validates :task, uniqueness: { scope: :user_id,
-message: "error: Sorry! You can only comment up to two times for each task." }
+# validates :task, uniqueness: { scope: :user_id,
+# message: "error: Sorry! You can only comment up to two times for each task." }
 end
