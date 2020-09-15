@@ -1,53 +1,77 @@
 class TasksController < ApplicationController
 
     def new
-        # binding.pry
-        @task = Task.new
-        @comment = Comment.find_by_id(params[:id])
-     @comment = current_user.comments.build
-      @comment = @task.comments.build
-
+        if user_signed_in?
+            @task = Task.new
+            render :new
+        else 
+           redirect_to '/'
+        end 
     end 
 
     def index 
-        @tasks = Task.priority_order
+        # binding.pry 
+        if user_signed_in?
+            @tasks = Task.priority_order
+        else 
+            redirect_to '/'
+         end 
     end
 
     def create
         # binding.pry
-        @task = Task.new(task_params)
-        if @task.save
-            redirect_to task_path(@task)
+        if user_signed_in?
+            @task = Task.new(task_params)
+                if @task.save
+                    redirect_to task_path(@task)
+                else 
+                    render :new
+                end 
         else 
-            render :new
+            redirect_to '/'
         end 
     end 
         
     def show 
         # binding.pry
-        set_task
-        @comment = Comment.find_by_id(params[:id])
-        # @comment = @task.comments
+        if user_signed_in?
+            set_task
+            @comment = Comment.find_by_id(params[:id])
+        else 
+            redirect_to '/'
+        end 
     end
 
     def edit
-        set_task
+        if user_signed_in?
+            set_task
+        else 
+            redirect_to '/'
+        end 
     end
 
     def update
-        set_task
-        if @task.update(task_params) && current_user.id == @task.user_id  #if return value doesnt save = returns false
-            redirect_to task_path(@task)
+        if user_signed_in?
+            set_task
+                if @task.update(task_params) && current_user.id == @task.user_id  #if return value doesnt save = returns false
+                    redirect_to task_path(@task)
+                else 
+                    render :new
+                end
         else 
-          redirect_to edit_task_path
-        end
+            redirect_to '/'
+        end 
     end
 
     def destroy
-        set_task
-        if @task.destroy && current_user.id == @task.user_id  #if return value doesnt save = returns false
-            redirect_to tasks_path 
-        end
+        if user_signed_in?
+            set_task
+            if @task.destroy && current_user.id == @task.user_id  #if return value doesnt save = returns false
+                redirect_to tasks_path 
+            end
+        else 
+            redirect_to '/'
+        end 
     end
 
     private
@@ -55,9 +79,9 @@ class TasksController < ApplicationController
 
     def set_task #lets you pull id, not repeat yourself in your controllers
         @task = Task.find_by_id(params[:id])
-        if ! @task 
-            redirect_to tasks_path 
-        end 
+            if !@task 
+                redirect_to tasks_path 
+            end 
     end
 
     def task_params

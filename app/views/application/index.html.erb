@@ -17,7 +17,11 @@ h2 {
 <body>
 <div style="text-align: left;">
 
-<h2><%= greet %>, <%= current_user.full_name if current_user %>.</h2>
+<% if user_signed_in? %> 
+   <h2><%= greet %>, <%= current_user.full_name %>.</h2> 
+<% end %>
+
+
 </div>
 
 <div style="text-align: center;">

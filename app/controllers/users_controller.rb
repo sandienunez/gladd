@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+    before_action :authenticate_user!
 
     #GET /register - New User Action 
     def new #actions 
