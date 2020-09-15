@@ -24,6 +24,8 @@ h4 {
 <div class="container">
 
 <%= form_for(@journal) do |f| %>
+<%= render partial: "layouts/errors", locals: {object: @journal} %>
+
 
 <%= f.label :date %>
 <%= f.date_select :date, {
@@ -51,51 +53,52 @@ h4 {
 
     <%= f.label :focus %>
     <br>
-   <%= f.select :focus, options_for_select(1..10) %>
+        <%= f.select :focus, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]] %>
+     
  <br>
   <br>
     <%= f.label :organization %>
         <br>
-    <%= f.select :organization, options_for_select(1..10) %>
+    <%= f.select :organization, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]] %>
 
     <br>
      <br>
 
      <%= f.label :impulse_control %>
          <br>
-    <%= f.select :impulse_control, options_for_select(1..10) %>
+    <%= f.select :impulse_control, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]] %>
 
  <br>
   <br>
      <%= f.label :worry %>
          <br>
-    <%= f.select :worry, options_for_select(1..10)  %>
+    <%= f.select :worry, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]] %>  
  <br>
   <br>
      <%= f.label :mood %>
          <br>
-    <%= f.select :mood, options_for_select(1..10) %>
+    <%= f.select :mood, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]] %> 
 
  <br>
   <br>
  <%= f.label :temper_control %>
          <br>
-    <%= f.select :temper_control, options_for_select(1..10) %>
+    <%= f.select :temper_control, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]] %> 
 <br>
 <br>
  <%= f.label :memory %>
          <br>
-    <%= f.select :memory, options_for_select(1..10) %>
+    <%= f.select :memory, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]] %> 
 <br>
 <br>
  <%= f.label :anxiety %>
          <br>
-    <%= f.select :anxiety, options_for_select(1..10)  %>
+    <%= f.select :anxiety, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]] %> 
 <br>
 <br>
  <%= f.label :sleep %>
          <br>
-    <%= f.select :sleep, options_for_select(1..10)  %>
+    <%= f.select :sleep, [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]] %>
 <br>
 <br>
 <h3>Write down any notes for the day :</h3>
@@ -156,7 +159,8 @@ h4 {
        <br>
  <%= f.label :healthy %>
          <br>
-    <%= f.select :healthy, options_for_select("Yes" => true, "No" => false), { prompt: "Select yes/no if meal was healthy" }   %>
+   <%= f.select :healthy, options_for_select([['Yes', 1], ['No', 2]], @journal.healthy) %>
+
        <br>
  <%= f.label :how_did_i_feel_after %>
          <br>

@@ -5,11 +5,10 @@ class JournalsController < ApplicationController
 
     def index 
         @journals = Journal.all
-
     end
 
     def create
-        # binding.pry
+        binding.pry
         @journal = Journal.new(journal_params)
         if @journal.save
             redirect_to journal_path(@journal)

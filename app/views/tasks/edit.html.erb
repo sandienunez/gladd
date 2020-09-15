@@ -88,7 +88,7 @@ h2 {
 <br>
 <br>
     <%= f.label :priority_ranking %>
-   <%= f.select :priority_ranking, options_for_select(1..6), { prompt: "Please Choose a ranking, 1 = not urgent and 6 = ULTRA important!" } %>
+   <%= f.select :priority_ranking, options_for_select((1..6), @task.priority_ranking) %>
     <br>
      <br>
 

@@ -3,6 +3,10 @@ class TasksController < ApplicationController
     def new
         # binding.pry
         @task = Task.new
+        @comment = Comment.find_by_id(params[:id])
+     @comment = current_user.comments.build
+      @comment = @task.comments.build
+
     end 
 
     def index 

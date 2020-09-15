@@ -15,9 +15,9 @@ h2 {
 <h2>Comment Feed. </h2>
 
 <ul>
-    <% @comments.each do |comment|%>
+    <% @comments.each do |comment| %>
 <br>
-
+<% binding.pry %>
   <li><%= comment.user.full_name %>  commented "<%= link_to comment.message, comment_path(comment) %>" for this Task: <%= link_to comment.task.task_name, task_path(comment.task_id) if comment.task %></li>
     <li><%= comment.user.full_name %>  commented "<%= link_to comment.message, comment_path(comment) %>" for this Daily Routine: <%= link_to comment.daily_routine.daily_plan, daily_routine_path(comment.daily_routine_id) if comment.daily_routine %></li>
       <li><%= comment.user.full_name %>  commented "<%= link_to comment.message, comment_path(comment) %>" for this Daily Journal: <%= link_to comment.journal.date, journal_path(comment.journal_id) if comment.journal %></li>
