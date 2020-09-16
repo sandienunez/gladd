@@ -1,23 +1,28 @@
+<div class="topnav">
+
+
+
 <nav>
     <ul>
+    <h1>
     <div style="text-align: right;">
-      <%= link_to "Home", root_path %>
-               <br>
+    <%= link_to "Home", root_path %> 
+            
         <% if user_signed_in? %>
            <%= link_to "Create Task", new_task_path %>
-           <br>
+      
             <%= link_to "Daily Tasks", tasks_path %>
-                     <br>
+         
              <%= link_to "Task Comment Feed", comments_path %>
-             <br>
+       
             <%= link_to "Create Daily Routine", new_daily_routine_path %>
-                     <br>
+                 
               <%= link_to "Daily Routines", daily_routines_path %>
-                     <br>
+              
             <%= link_to "Create Daily Journal", new_journal_path %>
-                     <br>
+                
               <%= link_to "Daily Journals", journals_path %>
-                     <br>
+                 
            <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
             <!--destroy_user_session_path= devise route = deletes request to sign out user 
             -don't forget to send method as well -->
@@ -33,3 +38,5 @@
     </ul>
 
 </nav>
+</div>
+</h1>

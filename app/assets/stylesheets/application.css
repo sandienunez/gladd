@@ -14,6 +14,8 @@
  *= require_self
  */
 
+ 
+
  .container {
     width: 500px;
     clear: both;
@@ -23,3 +25,39 @@
     width: 100%;
     clear: both;
   }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #feeb83;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #a4c2f5;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: myFirstFont
+  }
+  
+  .topnav a:hover {
+    background-color: #609ce0;
+    color: white;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  @font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+  }
+  
+  div {
+    font-family: myFirstFont;
+  }
+
+  h1 { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 1.2em; font-style: normal; font-variant: normal; font-weight: 545; font-stretch: ultra-expanded; line-height: 26.4px; }

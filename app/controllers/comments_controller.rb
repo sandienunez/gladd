@@ -11,7 +11,6 @@ class CommentsController <  ApplicationController
 
     def create
         if user_signed_in?
-            @task = Task.find_by_id(params[:id])
             @comment = current_user.comments.build(comment_params)
                 if @comment.save
                     redirect_to comments_path
@@ -57,7 +56,8 @@ class CommentsController <  ApplicationController
                 if current_user.id == @comment.user_id 
                     @comment.update(comment_params)
                 end 
-            redirect_to comments_path(@comment)
+               
+            redirect_to comments_path 
         else 
             redirect_to '/'
         end 
@@ -85,6 +85,6 @@ class CommentsController <  ApplicationController
     end
 
     def comment_params
-        params.require(:comment).permit(:message, :task_id, :daily_routine_id, :journal_id, :user_id)
+        params.require(:comment).permit(:message, :task_id, :task_name, :daily_routine_id, :journal_id, :user_id)
     end
 end

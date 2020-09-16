@@ -13,13 +13,15 @@ h2 {
 <body>
 
 
-<h2>Comment:  </h2>
-
-<h2><%= @comment.message %></h2>
+<h2>Comment.  </h2>
+<strong><li> <%= current_user.full_name %></strong> says:</li>
+<h2> <----------------<%= @comment.message %>----------------></h2>
  
- <li> Created by: <%= current_user.full_name %></li>
+ 
  <br>
-<p>For this task: <%= link_to @comment.task.task_name, task_path(@comment.task_id) if @comment.task %></p>
+ <% if @comment.task %>
+ <li><strong> About this Task:  </strong><%= link_to @comment.task.task_name, task_path(@comment.task_id) %></li>
+<% end %>
  <br>
 <br>
 <% if @comment.user == current_user %>

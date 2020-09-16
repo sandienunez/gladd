@@ -12,14 +12,20 @@ h2 {
 </head>
 <body>
 
+
 <h2> Edit Comment. </h2>
 
 <%= render partial: "layouts/errors", locals: {object: @comment} %>
 
+
 <%= form_for(@comment) do |f| %>
 
-    <%= f.label :task %>
-     <%= f.collection_select :task_id, Task.all, :user_id, :task_name %>
+      <% if !@comment.task %>
+    <%= f.label :task_name %>
+     <%= f.collection_select :task_id, Task.all, :id, :task_name %>
+     <% else %>
+    <%= f.hidden_field :task_id %>
+    <% end %>
 <br>
 <br>
 
