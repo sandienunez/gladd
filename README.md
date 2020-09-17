@@ -37,9 +37,17 @@ Eventually, BookGenie will be a fully-fledged website. Currently, installation o
 
 From there, you can create your personal BookGenie reading lists, add books, edit books and delete books! Make sure to listen to our bomb reading playlist to jam along to while you get your inner reading book worm on!
 
+## Built With
+
+* Ruby on Rails
+* SQLite3
+* HTML, CSS
+* Github Omniauth
+* Devise 
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/sandienunez/BookGenie. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sandienunez/tasky. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -48,7 +56,7 @@ MIT © https://github.com/sandienunez
 
 ## Code of Conduct
 
-Everyone interacting in the BookGenie project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the https://github.com/sandienunez/BookGenie/blob/master/app/CODE_OF_CONDUCT.md
+Everyone interacting in Tasky’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the https://github.com/sandienunez/tasky/blob/master/app/CODE_OF_CONDUCT.md
 
 
 
