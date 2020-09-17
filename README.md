@@ -42,7 +42,7 @@ REST => Representation State Transfer => set of conventions for structuring our 
 
 ## Motivation
 
-This app was created to help people with ADD and ADHD (Attention-deficit/hyperactivity disorder) that struggle with managing their time and responsibilities. Tasky helps you thrive everyday of your life! The goal of this app was to make a task management system that easily helps people organize their priorities and find a calm balance in their daily lives. This is the first ever online ADD Task Management system that not only helps you keep track of your task deadlines but helps you track your ADD symptoms, medications, supplements and more in your Daily Journal. The Daily Journal feature also helps you plan your spiritual, psychological, biological and social goals. The user also has the ability to seamlessly create custom Daily Routines that give you a visual flow and timeline of what you need to accomplish each day.
+This app was created to help people with ADD and ADHD (Attention-deficit/hyperactivity disorder) that struggle with managing their time and responsibilities. Tasky helps you thrive everyday of your life! The goal of this app was to make a task management system that easily helps people organize their priorities and find a calm balance in their daily lives. This is the first ever online ADD Task Management system that not only helps you keep track of your task deadlines but helps you track your ADD symptoms, medications, supplements and more in your Daily Journal. The Daily Journal feature also helps you plan your spiritual, psychological, biological and social long-term goals. The user also has the ability to seamlessly create custom Daily Routines that give you a visual flow and timeline of what you need to accomplish each day.
 
 ## Tasky Penguins Community
 
@@ -59,9 +59,9 @@ Eventually, tasky will be a fully-fledged website. Currently, installation of th
     1. Navigate to the repo on GitHub at https://github.com/sandienunez/tasky
     2. Fork and clone the [GitHub repo](https://github.com/sandienunez/tasky) to your local machine. 
     3. Click the green Clone or Download button and copy the remote URL.
-    ``` 
-    git@github.com:sandienunez/tasky.git
-    ```
+``` 
+git@github.com:sandienunez/tasky.git
+```
     4. Type git clone then paste the copied URL into your terminal.
     5. Type 'bundle install' to install dependencies. 
 
