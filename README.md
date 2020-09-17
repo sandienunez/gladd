@@ -1,8 +1,8 @@
 # tasky
 
-![unnamed](https://user-images.githubusercontent.com/61069416/91679593-cbd89c80-eb16-11ea-916a-0893d4e279f5.png)
-
 <img width="639" alt="taskylogo" src="https://user-images.githubusercontent.com/61069416/93532739-94882f00-f90f-11ea-91a3-932ca8595d23.png">
+
+<img width="766" alt="tasky2" src="https://user-images.githubusercontent.com/61069416/93535003-1e39fb80-f914-11ea-8e65-522a3f3fd8f9.png">
 
 
 ## Restful Routes and CRUD Actions
@@ -19,43 +19,60 @@ REST => Representation State Transfer => set of conventions for structuring our 
 | PATCH | /tasks/:id | #update | Update a task |
 | DELETE | /tasks/:id | #destroy | DELETE a task |
 
-# Motivation
+<img width="1200" alt="Screen Shot 2020-09-17 at 6 34 30 PM" src="https://user-images.githubusercontent.com/61069416/93535261-97d1e980-f914-11ea-9855-9a1951abd32b.png">
+
+<img width="1196" alt="Screen Shot 2020-09-17 at 6 34 40 PM" src="https://user-images.githubusercontent.com/61069416/93535254-943e6280-f914-11ea-83e0-77d7da0a3e5c.png">
+
+<img width="1255" alt="Screen Shot 2020-09-17 at 6 35 04 PM" src="https://user-images.githubusercontent.com/61069416/93535232-8ab4fa80-f914-11ea-9f8b-f3c3044463cb.png">
 
 
+## Motivation
 
-## Installation
-Eventually, BookGenie will be a fully-fledged website. Currently, installation of the project can be performed locally with the following steps:
+This app was created to help people with ADD and ADHD (Attention-deficit/hyperactivity disorder) that struggle with managing their time and responsibilities thrive everyday of their lives! The goal of this app was to make a task management system that easily helps people organize their priorities and find a calm balance in their daily lives. This is the first ever online ADD Task Management system that not only helps you keep track of your task deadlines but helps you track your ADD symptoms, medications, supplements and more in your Daily Journal. The Daily Journal feature also helps you plan your spiritual, psychological, biological and social goals. The user also has the ability to seamlessly create custom Daily Routines that give you a visual flow and timeline of what you need to accomplish each day.
 
-    1. Navigate to the repo on GitHub at https://github.com/sandienunez/BookGenie
-    2. Fork and clone repo to your local machine.
+## Community
+
+ Tasky strives to help users build a supportive and friendly community of tasky penguins through our commenting feature. All users have the ability to comment on anyone's tasks to uplift, motivate and inspire other tasky penguins worldwide!  
+
+
+## Prerequisites
+Other than the gems listed in this app's Gemfile, you will need to have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html) installed on your local machine as well as the ability to install Ruby gems.
+
+## Local Installation Instructions
+
+Eventually, tasky will be a fully-fledged website. Currently, installation of the project can be performed locally with the following steps:
+
+    1. Navigate to the repo on GitHub at https://github.com/sandienunez/tasky
+    2. Fork and clone the [GitHub repo](https://github.com/sandienunez/tasky) to your local machine. 
     3. Click the green Clone or Download button and copy the remote URL.
+    ``` 
+    git@github.com:sandienunez/tasky.git
+    ```
     4. Type git clone then paste the copied URL into your terminal.
     5. Type 'bundle install' to install dependencies. 
 
-### Installing
+## Installing
 
-To run this app locally, fork and clone the [GitHub repo](https://github.com/sandienunez/tasky) to your local machine. 
+Change directories into the repo directory. After running bundle install, run rails db:migrate and rails db:seed to create and seed the database. 
+```
+$ cd tasky 
+$ bundle install
+$ rails db:migrate
+$ rails db:seed
+```
+## Usage
 
-Change directories into the repo directory. Run bundle install to install dependencies, and rails db:migrate and rails db:seed to create and seed the database. 
+Run 'rails s' to start a web server and access the app in a web browser. 
 ```
-$cd yellowbitroad 
-$bundle install
-$rails db:migrate
-$rails db:seed
-```
-
-Run $rails s to start a web server and access the app in a web browser. 
-```
-$rails s
+$ rails s
 ```
 
 ## Usage
 
-    1. Run 'rake db:migrate' from your command line.
-    2. Run 'shotgun' from your command line. Then you can go to your browser and view the application.
-    3. Visit localhost:[port-number] (the port number will be specified after running shotgun).
+    1. Run 'rails s' from your command line to start a web server and view the application in the web browser.
+    2. Use your favorite browser to visit the route displayed in the terminal. (E.g. http://localhost:3000) 
 
-From there, you can create your personal BookGenie reading lists, add books, edit books and delete books! Make sure to listen to our bomb reading playlist to jam along to while you get your inner reading book worm on!
+From there, you can create, edit, update and delete your Daily tasks, Daily routines and Daily journals. You can also add comments to all your tasks and rank your task based on high priority from 1-6 utilizing our custom scope method! Let tasky take your day to infinity and beyond!
 
 ## Built With
 
@@ -107,22 +124,3 @@ Everyone interacting in Tasky’s codebases, issue trackers, chat rooms and mail
 
 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
