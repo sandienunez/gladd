@@ -2,6 +2,9 @@
 
 ![unnamed](https://user-images.githubusercontent.com/61069416/91679593-cbd89c80-eb16-11ea-916a-0893d4e279f5.png)
 
+<img width="639" alt="taskylogo" src="https://user-images.githubusercontent.com/61069416/93532739-94882f00-f90f-11ea-91a3-932ca8595d23.png">
+
+
 ## Restful Routes and CRUD Actions
 
 REST => Representation State Transfer => set of conventions for structuring our ROUTES and mapping them to CRUD actions (Create, Read, Update, Delete).
@@ -18,7 +21,7 @@ REST => Representation State Transfer => set of conventions for structuring our 
 
 # Motivation
 
-With how fast paced social media, the news outlets, techonology and more is evolving, it can be hard to not be distracted and make time to finally check off those books that have been on your booklist for ages. Let us help you take away the stress of planning when to start and end your books and help you find suitable times in your daily schedule to fit 5 minutes of reading. Everyone has 5 minutes to spare! Many studies have shown how reading can decrease stress levels, help you have more empathy, leave you feeling inspired and spark creativity or understanding in other projects you are working on! Use BookGenie during this COVID-19 crisis to unleash your inner bookworm and read (as Lionel Richie would say) all night long! All night long!!!
+
 
 ## Installation
 Eventually, BookGenie will be a fully-fledged website. Currently, installation of the project can be performed locally with the following steps:
@@ -28,6 +31,23 @@ Eventually, BookGenie will be a fully-fledged website. Currently, installation o
     3. Click the green Clone or Download button and copy the remote URL.
     4. Type git clone then paste the copied URL into your terminal.
     5. Type 'bundle install' to install dependencies. 
+
+### Installing
+
+To run this app locally, fork and clone the [GitHub repo](https://github.com/sandienunez/tasky) to your local machine. 
+
+Change directories into the repo directory. Run bundle install to install dependencies, and rails db:migrate and rails db:seed to create and seed the database. 
+```
+$cd yellowbitroad 
+$bundle install
+$rails db:migrate
+$rails db:seed
+```
+
+Run $rails s to start a web server and access the app in a web browser. 
+```
+$rails s
+```
 
 ## Usage
 
