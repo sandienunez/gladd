@@ -1,6 +1,6 @@
 # [tasky](http://github.com/sandienunez/tasky)
 
-### __tasky__ is a web app that easily helps people organize their tasks, priorities, deadlines and organize their daily lives. It was designed as a portfolio project at the Flatiron School. __tasky__ is written in Ruby on Rails, using the Devise gem, ActiveStorage and Github omniauth.
+### __tasky__ is a web app that easily helps adults and children with ADD organize their tasks, priorities, deadlines and master their daily lives. It was designed as a portfolio project at the Flatiron School. __tasky__ is written in Ruby on Rails, using the Devise gem, ActiveStorage and Github omniauth.
 
 <img width="639" alt="taskylogo" src="https://user-images.githubusercontent.com/61069416/93532739-94882f00-f90f-11ea-91a3-932ca8595d23.png">
 
