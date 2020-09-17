@@ -74,16 +74,10 @@ $ bundle install
 $ rails db:migrate
 $ rails db:seed
 ```
-## Usage
-
-Run 'rails s' to start a web server and access the app in a web browser. 
-```
-$ rails s
-```
 
 ## Usage
 
-    1. Run 'rails s' from your command line to start a web server and view the application in the web browser.
+    1. Run 'rails s' from your command line to start a web server and view app in the web browser.
     2. Use your favorite browser to visit the route displayed in the terminal. (E.g. http://localhost:3000) 
 
 From there, you can create, edit, update and delete your Daily tasks, Daily routines and Daily journals. You can also add comments to all your tasks and rank your task based on high priority from 1-6 utilizing our custom scope method! Let tasky take your day to infinity and beyond!
