@@ -1,4 +1,4 @@
-<%= render 'layouts/nav' %>
+
 <head>
 <style>
 body {background-color: khaki;}
@@ -15,25 +15,26 @@ h2 {
 
 
 <h2> Daily Routine.  </h2>
+<br>
 
-<h2>------------------------> <%= @daily_routine.daily_plan %> <----------------------------</h2>
+<h2>-------------------> <%= @daily_routine.date.strftime("%a %b %e %Y") %> <-------------------</h2>
 <div style="text-align: left;">
-<h3>Date Daily Routine was made:</h3>  <%=  @daily_routine.date %>
+<h3>Daily Plan:</h3>  <%=  @daily_routine.daily_plan %>
 <br>
 <br>
 <h3>Prayer or Meditations:</h3><%= @daily_routine.prayer_or_meditations %>
 
 
- <h3>Exercise Plan: <%=  @daily_routine.exercise_plan %>
+ <h3>Exercise Plan:</h3> <%=  @daily_routine.exercise_plan %>
   <br>
 <br>
  <h3> Stretch Plan: </h3> <%=  @daily_routine.stretch_plan %>
 <br>
 <br>
  <h3> 3 Superfoods to add to my Meals: </h3> <%=  @daily_routine.three_superfoods_to_add_to_my_meals %>
-
-
-
+<br>
+<br>
+<br>
  <% if @daily_routine.user == current_user %>    
 <%= button_to "Edit Daily Routine", edit_daily_routine_path, method: :get %> 
 <br>  

@@ -15,9 +15,9 @@ h2 {
 
 
 <h2> Daily Journal.  </h2>
-<h2>------------------------> <%= @journal.word_of_day %> <----------------------------</h2>
+<h2>-----------------------> <%= @journal.word_of_day %> <----------------------</h2>
 <div style="text-align: left;">
-<h3>Date Journal was made:</h3>  <%=  @journal.date %>
+<h2> <%=  @journal.date.strftime("%a %b %e %Y") %></h2> 
 <br>
 <br>
 <h3>Bible verse of the day:</h3><%= @journal.bible_verse_of_day %>
@@ -51,7 +51,7 @@ h2 {
 <h3>Dinner:</h3><%= @journal.dinner %>
 <h3>Was this a healthy meal? </h3><%= @journal.healthy %>
 <h3>How did I feel after I ate this meal:</h3><%= @journal.how_did_i_feel_after %>
-<h3>What time was this meal eaten:</h3><%= @journal.time_eaten %>
+<h3>Time meal eaten:</h3><%= @journal.time_eaten.strftime("%l:%M%P") %>
 
 <h3> Below, fill out what is most important to you in these areas. Write what you want for each goal and what you do not want for each goal.</h3>
 <br>

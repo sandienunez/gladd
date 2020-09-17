@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 2020_09_13_183915) do
     t.string "dinner"
     t.integer "healthy"
     t.text "how_did_i_feel_after"
-    t.time "time_eaten"
     t.string "brain_health"
     t.string "physical_health"
     t.string "emotional_health"

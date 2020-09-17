@@ -49,7 +49,7 @@ h4 {
          <br>
     <%= f.text_area :bible_verse_of_day %>
     <br>
-<h3>Instructions: Write down where you are each day. On a scale of 1 to 10 (1 is bad, 10 is excellent) rate the areas of focus, organization, impulse control, worry, mood, temper control, memory, anxiety, sleep and whatever else is important to you.</h3>
+<h3>Instructions: Write down where you are each day. On a scale of 1 to 10 (1 is bad, 10 is excellent) rate the areas of focus, organization, impulse control, worry, mood, temper control, memory, anxiety and sleep.</h3>
 
     <%= f.label :focus %>
     <br>
@@ -134,115 +134,124 @@ h4 {
     <%= f.text_area :challenges   %>
 
    <br>
-<h3>Write down what you ate for each meal and how it made you feel:</h3>
+<h2>Write down what you ate for each meal. How it make you feel?</h2>
 
  <%= f.label :breakfast %>
          <br>
     <%= f.text_area :breakfast  %>
-
+<br>
        <br>
  <%= f.label :snack_one %>
          <br>
     <%= f.text_area :snack_one    %>
        <br>
+       <br>
  <%= f.label :lunch %>
          <br>
     <%= f.text_area :lunch   %>
+       <br>
        <br>
  <%= f.label :snack_two  %>
          <br>
     <%= f.text_area :snack_two   %>
        <br>
+       <br>
  <%= f.label :dinner %>
          <br>
     <%= f.text_area :dinner   %>
        <br>
- <%= f.label :healthy %>
-         <br>
+       <br>
+ <p>Were my meals <%= f.label :healthy %>? </p>
    <%= f.select :healthy, options_for_select([['Yes', 1], ['No', 2]], @journal.healthy) %>
 
        <br>
- <%= f.label :how_did_i_feel_after %>
-         <br>
+       <br>
+ <p><%= f.label :how_did_i_feel_after %> my meals? </p>
     <%= f.text_area :how_did_i_feel_after   %>
 
        <br>
- <%= f.label :time_eaten %>
-         <br>
-    <%= f.time_select :time_eaten   %>
        <br>
-
-<h3> Below, fill out what is most important to you in these areas. Write what you want for each goal and what you do not want for each goal.</h3>
 <br>
+<h3> Below, fill out what is most important to you in these areas. Write what you want for each goal and what you do not want for each goal.</h3>
 <h2>Biological Goals:</h2>
  <%= f.label :brain_health %>
          <br>
     <%= f.text_area :brain_health   %>
        <br>
+       <br>
  <%= f.label :physical_health %>
          <br>
     <%= f.text_area :physical_health  %>
+       <br>
        <br>
 <h2>Psychological Goals:</h2>
  <%= f.label :emotional_health %>
          <br>
     <%= f.text_area :emotional_health   %>
        <br>
+       <br>
  <%= f.label :thinking_patterns %>
          <br>
     <%= f.text_area :thinking_patterns   %>
+       <br>
        <br>
 <h2>Social Goals:</h2>
  <%= f.label :spouse %>
          <br>
     <%= f.text_area :spouse  %>
        <br>
+       <br>
  <%= f.label :children%>
          <br>
     <%= f.text_area :children  %>
+       <br>
        <br>
  <%= f.label :family_and_friends %>
          <br>
     <%= f.text_area :family_and_friends  %>
     <br>
+    <br>
 <%= f.label :work%>
          <br>
     <%= f.text_area :work  %>
-
+<br>
   <br>
 <%= f.label :school %>
          <br>
     <%= f.text_area :school  %>
+      <br>
       <br>
 <%= f.label :money %>
          <br>
     <%= f.text_area :money  %>
 
       <br>
-
+<br>
 <h2>Spiritual Goals:</h2>
 <%= f.label :spiritual_life %>
          <br>
     <%= f.text_area :spiritual_life %>
       <br>
+      <br>
 <%= f.label :character %>
          <br>
     <%= f.text_area :character %>
       <br>
+      <br>
 <%= f.label :passions %>
          <br>
     <%= f.text_area :passions %>
-
+<br>
           <br>
 <%= f.label :community_service %>
          <br>
     <%= f.text_area :community_service %>
-
+<br>
           <br>
 <%= f.label :giving_to_charity %>
          <br>
     <%= f.text_area :giving_to_charity %>
-
+<br>
           <br>
 
 

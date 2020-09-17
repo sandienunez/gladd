@@ -23,7 +23,8 @@ h2 {
 
 
 <%= form_for(@task) do |f| %>
-<p><%= f.label :date %>:
+
+<%= f.label :date %>
 <%= f.date_select :date, {
             order: [:month, :day, :year],
             date_separator: "/",
@@ -32,7 +33,8 @@ h2 {
                 day: 'dd',
                 year: 'yyyy',
             },
-         } %></p>
+         } %>
+
 
    <p><%= f.label :task_name %>:</p>
     <%= f.text_area :task_name %>
@@ -72,7 +74,8 @@ h2 {
             },
          } %></p>
 <br>
- <p><%= f.label :estimate_time_to_finish_task %>: choose how many hours and/or minutes it will take to complete this task</p>
+ <h3><%= f.label :estimate_time_to_finish_task %>: </h3>  
+  <p> Choose how many hours and/or minutes it will take to complete this task.</p>
     <%= f.text_area :estimate_time_to_finish_task %>
 
 

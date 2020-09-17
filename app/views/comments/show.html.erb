@@ -14,13 +14,15 @@ h2 {
 
 
 <h2>Comment.  </h2>
-<strong><li> <%= current_user.full_name %></strong> says:</li>
+<strong><p><%= current_user.full_name %></strong> says:</p>
 <h2> <----------------<%= @comment.message %>----------------></h2>
- 
+<strong> When: </strong><%= @comment.updated_at.strftime("%B %d, %Y at %-I:%M%P") %>
+<br>
  
  <br>
  <% if @comment.task %>
- <li><strong> About this Task:  </strong><%= link_to @comment.task.task_name, task_path(@comment.task_id) %></li>
+<strong> About this Task:  </strong><%= link_to @comment.task.task_name, task_path(@comment.task_id) %>
+<br>
 <% end %>
  <br>
 <br>

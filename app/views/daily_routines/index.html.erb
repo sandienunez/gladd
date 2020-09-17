@@ -18,7 +18,7 @@ h2 {
 <ul>
     <% @daily_routines.each do |daily_routine|%>
 <br>
-  <li><%= daily_routine.user.full_name %>  made: <%= link_to daily_routine.daily_plan, daily_routine_path(daily_routine) %>
+  <li><%= daily_routine.user.full_name %>  made: <%= link_to daily_routine.date, daily_routine_path(daily_routine) %>
 <br>
 <% if current_user == daily_routine.user %> 
     <%= button_to "Edit", edit_daily_routine_path(daily_routine), method: :get  %> 

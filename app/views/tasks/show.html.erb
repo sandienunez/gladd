@@ -4,7 +4,7 @@
 body {background-color: khaki;}
 
 h2 {
-  color: #619ce0;
+  color: #a4c2f5;
   font-family: arial;
   font-size: 300%;
 
@@ -15,13 +15,11 @@ h2 {
 
 
 <h2> Task.  </h2>
-<h2>-------------> <%= @task.task_name %> <------------</h2>
+<h2>-------------> <%= @task.task_name %> <--------------</h2>
 <div style="text-align: left;">
-<h3>Date task was created:</h3>  <%=  @task.date  %>
 
-<br>
-<br>
-<h3>Priority Ranking:</h3><%= @task.priority_ranking %>
+<h2> <%=  @task.date.strftime("%a %b %e %Y")  %>.</h2>
+<h2>Priority: <%= @task.priority_ranking %> </h2>
 <p> 6 = Highest Priority (Task needs to be completed right now, MOST important)</p>
 <p> 5 = Highest Priority (Task needs to be completed today BUT can wait until later today, extra important)</p>
 <p> 4 = Lowest Priority (Task needs to be finished by tomorrow, very important)</p>
@@ -30,24 +28,19 @@ h2 {
 <p> 1 = Lowest Priority (Task can be done by next week, not urgent at all)</p>
 <h3>3 actions to help you finish this task.</h3>
 <%= label_tag("Please check off these actions when you complete them.") %>
-<br>
-<br>
-<%= check_box_tag(:action_one) %>
-<%= label_tag(:action_one, "Action 1:") %> <%= @task.action_one %>
-<br>
-<%= check_box_tag(:action_two) %>
-<%= label_tag(:action_two, "Action 2:") %> <%=  @task.action_two %>
-<br>
-<%= check_box_tag(:action_three) %> 
-<%= label_tag(:action_three, "Action 3:") %> <%=  @task.action_three %>
-<br>
-<br>
 
- <h3>Deadline: </h3> <%=  @task.deadline %>
-  <br>
-<br>
+<h3><%= check_box_tag(:action_one) %>
+<%= label_tag(:action_one, "Action 1:") %> <%= @task.action_one %></h3>
 
- <h3> Estimate Time to finish task: </h3> <%=  @task.estimate_time_to_finish_task %>
+<h3><%= check_box_tag(:action_two) %>
+<%= label_tag(:action_two, "Action 2:") %> <%=  @task.action_two %></h3>
+
+<h3><%= check_box_tag(:action_three) %> 
+<%= label_tag(:action_three, "Action 3:") %> <%=  @task.action_three %></h3>
+
+
+ <h2>Deadline: <%=  @task.deadline.strftime("%a %b %e %Y")  %>.</h2> 
+ <h2> Estimate Time to finish task: <%=  @task.estimate_time_to_finish_task %></h2> 
 <br>
 <br>
 
@@ -68,12 +61,13 @@ h2 {
 <h2>Comments. </h2>
     <% @task.comments.each do |comment| %>
      <br>   
-     <strong><%= current_user.full_name  %>  </strong><%= comment.message %>  
+     <strong><%= current_user.full_name %></strong> <%= comment.message %> 
+     <p><%= comment.updated_at.strftime("%B %d, %Y at %l:%M%P") %></p>
+ 
                 <br>   
     <% if comment.user == current_user %>
     <br>
     <%= button_to "Edit Comment", edit_comment_path(comment), method: :get %>
-    <br>
     <%= button_to "Delete Comment", comment_path(comment), data: {confirm: "Are you sure you want to delete this task?"}, method: :delete  %>
 
 <% end %> 

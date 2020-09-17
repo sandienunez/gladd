@@ -37,7 +37,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px;
     font-family: myFirstFont
   }
   
@@ -60,4 +60,46 @@
     font-family: myFirstFont;
   }
 
-  h1 { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 1.2em; font-style: normal; font-variant: normal; font-weight: 545; font-stretch: ultra-expanded; line-height: 26.4px; }
+  h1 { 
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+       font-size: 1.2em;
+        font-style: normal;
+         font-variant: normal; 
+         font-weight: 545; 
+         line-height: 
+         26.4px; 
+        }
+
+ 
+
+h3 {
+    color: #609ce0;
+   } 
+
+  
+
+   textarea
+   {
+     width: 30%;
+     height: 150px;
+     padding: 15px 22px;
+     box-sizing: border-box;
+     border: 4px solid #609ce0;
+     border-radius: 5px;
+     background-color: #a4c2f5;
+     resize: none;  
+     color: white
+   }
+   
+   input[type=button], input[type=reset], input[type=submit] {
+    background-color: #a4c2f5;
+    border: none;
+    color: white;
+    padding: 18px 36px;
+    text-decoration: none;
+    margin: 5px 4px;
+    cursor: pointer;  
+}
+
+
+

@@ -50,7 +50,7 @@ h4 {
          <br>
     <%= f.text_area :bible_verse_of_day %>
     <br>
-<h3>Instructions: Write down where you are each day. On a scale of 1 to 10 (1 is bad, 10 is excellent) rate the areas of focus, organization, impulse control, worry, mood, temper control, memory, anxiety, sleep and whatever else is important to you.</h3>
+<h3>Instructions: Write down where you are each day. On a scale of 1 to 10 (1 is bad, 10 is excellent) rate the areas of focus, organization, impulse control, worry, mood, temper control, memory, anxiety and sleep.</h3>
 
     <%= f.label :focus %>
     <br>
@@ -135,8 +135,7 @@ h4 {
     <%= f.text_area :challenges   %>
 
    <br>
-<h3>Write down what you ate for each meal and how it made you feel:</h3>
-
+<h2>Write down what you ate for each meal. How it make you feel?</h2>
  <%= f.label :breakfast %>
          <br>
     <%= f.text_area :breakfast  %>
@@ -158,20 +157,16 @@ h4 {
          <br>
     <%= f.text_area :dinner   %>
        <br>
- <%= f.label :healthy %>
-         <br>
+<p>Were my meals <%= f.label :healthy %>? </p>       
    <%= f.select :healthy, options_for_select([['Yes', 1], ['No', 2]], @journal.healthy) %>
 
        <br>
- <%= f.label :how_did_i_feel_after %>
+ <p><%= f.label :how_did_i_feel_after %> my meals? </p>
          <br>
     <%= f.text_area :how_did_i_feel_after   %>
 
        <br>
- <%= f.label :time_eaten %>
-         <br>
-    <%= f.time_select :time_eaten   %>
-       <br>
+<br>
 
 <h3> Below, fill out what is most important to you in these areas. Write what you want for each goal and what you do not want for each goal.</h3>
 <br>
