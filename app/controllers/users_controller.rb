@@ -34,7 +34,4 @@ class UsersController < ApplicationController
         #require our object 
     end
 
-
-
-
 end

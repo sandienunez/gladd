@@ -730,8 +730,58 @@ h2 {
  <% end %>
 </ul>
 
------------------
+-----------------old user model --------------------
+class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  has_many :comments
+  has_many :commented_tasks, through: :comments, source: :tasks  #do i still need this if these are nested?
+  #rename relationship and still have access to them 
+  has_many :tasks #that user has created 
+  has_many :daily_routines, through: :tasks #check about this 
+  has_many :journals 
+  validates :email, uniqueness: true, presence: true  
+  validates_presence_of :full_name
+  #has_secure_password not needed bc of devise 
 
+-----------------old task model --------------------
+class Task < ApplicationRecord
+   scope :priority_order, -> { order(priority_ranking: :desc)}
+                            #attribute
+
+   #when we call scope we get = ActiveRecord::Relation object
+   belongs_to :user, optional: true 
+   belongs_to :daily_routine, optional: true #check this
+   has_many :comments, dependent: :destroy
+   has_many :users, through: :comments #ppl who have commented on it
+   validates :task_name, :action_one, :action_two, :action_three, :date, :priority_ranking, presence: true 
+   validate :limit_number_of_tasks
+
+-----------------old comment model --------------------
+class Comment < ApplicationRecord
+    belongs_to :user, optional: true 
+    belongs_to :task, optional: true 
+    # belongs_to :daily_routine, optional: true 
+    # belongs_to :journal, optional: true 
+validates :message, presence: true 
+# validates :task, uniqueness: { scope: :user_id,
+# message: "error: Sorry! You can only comment once for each task." }
+end
+-----------------old daily_routine model --------------------
+class DailyRoutine < ApplicationRecord
+    belongs_to :user, optional: true 
+    belongs_to :task, optional: true 
+    # has_many :comments, dependent: :destroy
+    has_many :users
+    validates :daily_plan, :date, presence: true  
+end
+-----------------old journal model --------------------
+class Journal < ApplicationRecord
+    belongs_to :user, optional: true 
+    # has_many :comments, dependent: :destroy
+    has_many :users
+    validates :date, :word_of_day, presence: true  
+end
          
 
 

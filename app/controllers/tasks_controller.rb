@@ -10,7 +10,6 @@ class TasksController < ApplicationController
     end 
 
     def index 
-        # binding.pry 
         if user_signed_in?
             @tasks = Task.priority_order
         else 
@@ -19,7 +18,6 @@ class TasksController < ApplicationController
     end
 
     def create
-        # binding.pry
         if user_signed_in?
             @task = Task.new(task_params)
                 if @task.save
@@ -33,7 +31,6 @@ class TasksController < ApplicationController
     end 
         
     def show 
-        # binding.pry
         if user_signed_in?
             set_task
             @comment = Comment.find_by_id(params[:id])
@@ -75,7 +72,6 @@ class TasksController < ApplicationController
     end
 
     private
-    #strong params = needed when you are mass assigning data 
 
     def set_task #lets you pull id, not repeat yourself in your controllers
         @task = Task.find_by_id(params[:id])
@@ -85,10 +81,10 @@ class TasksController < ApplicationController
     end
 
     def task_params
-        # binding.pry
         params.require(:task).permit(:date, :"date(2i)", :priority_ranking, :task_name, :action_one, :action_two, :action_three, :deadline, :estimate_time_to_finish_task, :user_id)
     end
 
-    #add destroy for delete button link_to
+    #strong params = needed when you are mass assigning data 
+
 
 end 

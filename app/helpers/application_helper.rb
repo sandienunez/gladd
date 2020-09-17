@@ -10,17 +10,14 @@ module ApplicationHelper
         night = today.change( hour: 20 )
         tomorrow = today.tomorrow
       
-        if (morning..noon).cover? now
-          'Good Morning'
-        elsif (noon..evening).cover? now
-          'Good Afternoon'
-        elsif (evening..night).cover? now
-          'Good Evening'
-        elsif (night..tomorrow).cover? now
-          'Good Night'
-        end
+            if (morning..noon).cover? now
+                'Good Morning'
+            elsif (noon..evening).cover? now
+                'Good Afternoon'
+            elsif (evening..night).cover? now
+                'Good Evening'
+            elsif (night..tomorrow).cover? now
+                'Good Night'
+            end
       end
-
-
-      
 end

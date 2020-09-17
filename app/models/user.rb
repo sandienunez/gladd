@@ -2,11 +2,12 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :comments
-  has_many :commented_tasks, through: :comments, source: :tasks  #do i still need this if these are nested?
-  #rename relationship and still have access to them 
+  has_many :commented_tasks, through: :comments, source: :tasks #tasks they commented on 
   has_many :tasks #that user has created 
-  has_many :daily_routines, through: :tasks #check about this 
+  #is this still needed since i have a Task belongs_to :user assocation, if i already established relationship above?
+  #if often has_many is on other side of a belongs_to assosciation 
   has_many :journals 
+
   validates :email, uniqueness: true, presence: true  
   validates_presence_of :full_name
   #has_secure_password not needed bc of devise 
