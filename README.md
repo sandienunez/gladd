@@ -50,6 +50,15 @@ This app was created to help people with ADD and ADHD (Attention-deficit/hyperac
 
  Tasky strives to help users build a supportive and friendly community of tasky penguins through our commenting feature. All users have the ability to comment on anyone's tasks to uplift, motivate and inspire other tasky penguins worldwide!  
 
+## Create your Daily Routine
+
+Plan your Daily Routine by clicking the Create Daily Routine button.
+
+From this form, you can create a new daily routine by filling out all the sections provided.
+
+<img width="1271" alt="Screen Shot 2020-09-17 at 7 43 46 PM" src="https://user-images.githubusercontent.com/61069416/93539242-2eef6f00-f91e-11ea-9784-87f18c7cc72d.png">
+<img width="1218" alt="Screen Shot 2020-09-17 at 7 43 39 PM" src="https://user-images.githubusercontent.com/61069416/93539246-31ea5f80-f91e-11ea-9ab1-de039a6ac882.png">
+<img width="1160" alt="Screen Shot 2020-09-17 at 7 43 02 PM" src="https://user-images.githubusercontent.com/61069416/93539258-37e04080-f91e-11ea-8c5e-e382b694f6e6.png">
 
 ## Prerequisites
 Other than the gems listed in this app's Gemfile, you will need to have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html) installed on your local machine as well as the ability to install Ruby gems.
