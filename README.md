@@ -28,9 +28,9 @@ REST => Representation State Transfer => set of conventions for structuring our 
 
 ## Motivation
 
-This app was created to help people with ADD and ADHD (Attention-deficit/hyperactivity disorder) that struggle with managing their time and responsibilities thrive everyday of their lives! The goal of this app was to make a task management system that easily helps people organize their priorities and find a calm balance in their daily lives. This is the first ever online ADD Task Management system that not only helps you keep track of your task deadlines but helps you track your ADD symptoms, medications, supplements and more in your Daily Journal. The Daily Journal feature also helps you plan your spiritual, psychological, biological and social goals. The user also has the ability to seamlessly create custom Daily Routines that give you a visual flow and timeline of what you need to accomplish each day.
+This app was created to help people with ADD and ADHD (Attention-deficit/hyperactivity disorder) that struggle with managing their time and responsibilities. Tasky helps you thrive everyday of your life! The goal of this app was to make a task management system that easily helps people organize their priorities and find a calm balance in their daily lives. This is the first ever online ADD Task Management system that not only helps you keep track of your task deadlines but helps you track your ADD symptoms, medications, supplements and more in your Daily Journal. The Daily Journal feature also helps you plan your spiritual, psychological, biological and social goals. The user also has the ability to seamlessly create custom Daily Routines that give you a visual flow and timeline of what you need to accomplish each day.
 
-## Community
+## Tasky Penguins Community
 
  Tasky strives to help users build a supportive and friendly community of tasky penguins through our commenting feature. All users have the ability to comment on anyone's tasks to uplift, motivate and inspire other tasky penguins worldwide!  
 
