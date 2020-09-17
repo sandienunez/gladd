@@ -19,23 +19,23 @@ REST => Representation State Transfer => set of conventions for structuring our 
 | PATCH | /tasks/:id | #update | Update a task |
 | DELETE | /tasks/:id | #destroy | DELETE a task |
 
-## Tasks Routes
+### Tasks Routes
 <img width="1202" alt="Screen Shot 2020-09-17 at 7 19 14 PM" src="https://user-images.githubusercontent.com/61069416/93537882-b9ce6a80-f91a-11ea-968f-0951c146dc8b.png">
 
-## Comments Routes
+### Comments Routes
 
 <img width="1205" alt="Screen Shot 2020-09-17 at 7 21 22 PM" src="https://user-images.githubusercontent.com/61069416/93538003-02862380-f91b-11ea-831c-56d02cf9937a.png">
 
 
-## Journal Routes
+### Journal Routes
 <img width="1200" alt="Screen Shot 2020-09-17 at 6 34 30 PM" src="https://user-images.githubusercontent.com/61069416/93535261-97d1e980-f914-11ea-9855-9a1951abd32b.png">
 
 
-## Daily Routine Routes
+### Daily Routine Routes
 <img width="1196" alt="Screen Shot 2020-09-17 at 6 34 40 PM" src="https://user-images.githubusercontent.com/61069416/93535254-943e6280-f914-11ea-83e0-77d7da0a3e5c.png">
 
 
-## Nested Routes
+### Nested Routes
 <img width="1255" alt="Screen Shot 2020-09-17 at 6 35 04 PM" src="https://user-images.githubusercontent.com/61069416/93535232-8ab4fa80-f914-11ea-9f8b-f3c3044463cb.png">
 
 
