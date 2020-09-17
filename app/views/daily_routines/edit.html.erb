@@ -1,28 +1,10 @@
 
 <%= render partial: "layouts/errors", locals: {object: @daily_routine} %>
 
-<head>
-<style>
-body {background-color: khaki;}
+<%= render 'layouts/styling' %>
 
-h2 {
-  color: #619ce0;
-  font-family: arial;
-  font-size: 300%;
-
-}
-h4 {
-  color: #619ce0;
-  font-family: arial;
-  font-size: 300%;
-
-}
-</style>
-</head>
-<body>
-<ul>
 <h2> Edit Daily Routine. </h2>
- <div class="container">
+
 
 <%= form_for(@daily_routine) do |f| %>
 
@@ -79,5 +61,5 @@ h4 {
    
     <% end %>
   
-    </ul>
+
 

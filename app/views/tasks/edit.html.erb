@@ -1,21 +1,7 @@
-<%= render partial: "layouts/errors", locals: {object: @task} %>
-
-<head>
-<style>
-body {background-color: khaki;}
-
-h2 {
-  color: #619ce0;
-  font-family: arial;
-  font-size: 300%;
-
-}
-</style>
-</head>
-<body>
+<%= render 'layouts/styling' %>
 
 <h2> Edit Task. </h2>
-<ul>
+
 
 <%= form_for(@task) do |f| %>
 

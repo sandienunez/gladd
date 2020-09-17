@@ -1,23 +1,9 @@
 
-
+<%= render 'layouts/styling' %>
 <%= render partial: "layouts/errors", locals: {object: @task} %>
 <!-- render the errors partial, sent it to the @task as the object  -->
 <!-- render partial + use local variables-->
-<head>
-<style>
-body {background-color: khaki;}
 
-h2 {
-  color: #619ce0;
-  font-family: arial;
-  font-size: 300%;
-
-}
-</style>
-</head>
-<body>
-
-<ul>
 <h2> Plan your Daily Tasks. </h2>
 <h3> Next to each row, fill out each part in the space provided. For the "Task name" row, please write 1 task that needs to be completed that day. </h3>
 

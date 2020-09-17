@@ -1,16 +1,4 @@
-<head>
-<style>
-body {background-color: khaki;}
-
-h2 {
-  color: #619ce0;
-  font-family: arial;
-  font-size: 300%;
-
-}
-</style>
-</head>
-<body>
+<%= render 'layouts/styling' %>
 
 <h2> Create a Comment. </h2>
 
@@ -18,20 +6,5 @@ h2 {
 
 
 <%= form_for @comment do |f| %>
-
-     <% if !@comment.task %>
-    <%= f.label :task_name %>
-     <%= f.collection_select :task_id, Task.all, :id, :task_name %>
-     <% else %>
-    <%= f.hidden_field :task_id %>
-    <% end %>
-<br>
-<br>
-
-     <%= f.label :message %>
-     <%= f.text_area :message %>
-<br>
-<br>
-    <%= f.submit %>
-
-    <% end %>
+     <%= render partial: 'comments/form', locals: {f: f} %>
+<% end %>

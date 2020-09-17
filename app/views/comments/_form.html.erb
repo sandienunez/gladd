@@ -1,0 +1,15 @@
+  <% if !@comment.task %>
+    <%= f.label :task_name %>
+     <%= f.collection_select :task_id, Task.all, :id, :task_name %>
+     <% else %>
+    <%= f.hidden_field :task_id %>
+    <% end %>
+<br>
+<br>
+
+     <%= f.label :message %>
+     <%= f.text_area :message %>
+<br>
+<br>
+
+    <%= f.submit "Save" %>
