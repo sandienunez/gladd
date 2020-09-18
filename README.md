@@ -50,6 +50,9 @@ This app was created to help people with ADD and ADHD (Attention-deficit/hyperac
 
  Tasky strives to help users build a supportive and friendly community of tasky penguins through our commenting feature. All users have the ability to comment on anyone's tasks to uplift, motivate and inspire other tasky penguins worldwide!  
 
+<img width="1032" alt="Screen Shot 2020-09-17 at 9 30 05 PM" src="https://user-images.githubusercontent.com/61069416/93544845-fb681100-f92c-11ea-97a3-88e9c6ee9ad6.png">
+
+
 ## Create Tasks
 
 Map out your Daily tasks by clicking the Create Task button.
@@ -96,6 +99,14 @@ On this form, you can create a new daily routine based on what you want to accom
 Rank your Daily Tasks from Highest to Lowest Priority based on a scale from 1-6. Where 6 is the highest priority and 1 is the lowest priority. This was achieved using an Active Record custom Scope method. 
 
 <img width="1042" alt="Screen Shot 2020-09-17 at 8 43 11 PM" src="https://user-images.githubusercontent.com/61069416/93543713-4a607700-f92a-11ea-9d1c-781c22985df8.png">
+
+## Create Comments
+
+A user can create, edit and delete comments they make on tasks they made or tasks from other tasky penguins in the community. 
+
+<img width="1125" alt="Screen Shot 2020-09-17 at 8 04 12 PM" src="https://user-images.githubusercontent.com/61069416/93544809-e4292380-f92c-11ea-9ab8-7b05bfba534d.png">
+<img width="1153" alt="Screen Shot 2020-09-17 at 8 04 23 PM" src="https://user-images.githubusercontent.com/61069416/93544908-205c8400-f92d-11ea-9427-c33005694f6b.png">
+
 
 ## Prerequisites
 Other than the gems listed in this app's Gemfile, you will need to have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html) installed on your local machine as well as the ability to install Ruby gems.
