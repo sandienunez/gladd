@@ -50,6 +50,23 @@ This app was created to help people with ADD and ADHD (Attention-deficit/hyperac
 
  Tasky strives to help users build a supportive and friendly community of tasky penguins through our commenting feature. All users have the ability to comment on anyone's tasks to uplift, motivate and inspire other tasky penguins worldwide!  
 
+## Create Tasks
+
+Map out your Daily tasks by clicking the Create Daily Tasks button.
+
+On this form, you can create a new daily task by filling out all the sections listed.
+
+<img width="1205" alt="Screen Shot 2020-09-17 at 8 01 52 PM" src="https://user-images.githubusercontent.com/61069416/93544374-f22a7480-f92b-11ea-96f3-2cae66a4d591.png">
+<img width="1292" alt="Screen Shot 2020-09-17 at 8 00 30 PM" src="https://user-images.githubusercontent.com/61069416/93544416-09696200-f92c-11ea-86ea-ccb2bf8b57cb.png">
+<img width="1279" alt="Screen Shot 2020-09-17 at 8 00 42 PM" src="https://user-images.githubusercontent.com/61069416/93544399-02daea80-f92c-11ea-9e20-bf6414a83067.png">
+<img width="1198" alt="Screen Shot 2020-09-17 at 8 00 55 PM" src="https://user-images.githubusercontent.com/61069416/93544390-fd7da000-f92b-11ea-9880-94938232f094.png">
+<img width="1146" alt="Screen Shot 2020-09-17 at 8 03 08 PM" src="https://user-images.githubusercontent.com/61069416/93544350-e2ab2b80-f92b-11ea-9a0b-2cc7aa6bb8a2.png">
+<img width="1186" alt="Screen Shot 2020-09-17 at 8 03 27 PM" src="https://user-images.githubusercontent.com/61069416/93544360-e8a10c80-f92b-11ea-8c1b-1aa41643f913.png">
+<img width="1147" alt="Screen Shot 2020-09-17 at 8 10 01 PM" src="https://user-images.githubusercontent.com/61069416/93544287-b394ba00-f92b-11ea-8521-d6518d55a81a.png">
+<img width="1147" alt="Screen Shot 2020-09-17 at 8 06 15 PM" src="https://user-images.githubusercontent.com/61069416/93544326-c7402080-f92b-11ea-936c-7bb6a4fd3645.png">
+
+
+
 ## Create your Daily Routine
 
 Plan your Daily Routine by clicking the Create Daily Routine button.
