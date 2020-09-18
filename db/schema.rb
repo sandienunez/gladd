@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 2020_09_13_183915) do
     t.integer "memory"
     t.integer "anxiety"
     t.integer "sleep"
-    t.integer "other"
     t.text "notes"
     t.text "reminders"
     t.text "three_things_i_am_grateful_for"

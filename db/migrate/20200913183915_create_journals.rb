@@ -12,7 +12,6 @@ class CreateJournals < ActiveRecord::Migration[6.0]
       t.integer :memory
       t.integer :anxiety
       t.integer :sleep
-      t.integer :other
       t.text :notes
       t.text :reminders
       t.text :three_things_i_am_grateful_for
