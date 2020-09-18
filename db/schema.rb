@@ -15,8 +15,6 @@ ActiveRecord::Schema.define(version: 2020_09_13_183915) do
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "task_id"
-    t.integer "daily_routine_id"
-    t.integer "journal_id"
     t.string "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
