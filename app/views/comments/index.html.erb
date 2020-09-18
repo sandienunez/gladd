@@ -6,7 +6,7 @@
     <% @comments.each do |comment| %>
 <br>
 
-  <li><%= comment.user.full_name %>  commented "<%= link_to comment.message, comment_path(comment) %>" for this Task: <%= link_to comment.task.task_name, task_path(comment.task_id) if comment.task %></li>
+  <strong><li><%= comment.user.full_name %></strong>  commented "<%= link_to comment.message, comment_path(comment) %>" for this Task: <%= link_to comment.task.task_name, task_path(comment.task_id) if comment.task %></li>
    
 <br>
 <% if current_user == comment.user %> 

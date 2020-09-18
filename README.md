@@ -54,12 +54,15 @@ This app was created to help people with ADD and ADHD (Attention-deficit/hyperac
 
 Plan your Daily Routine by clicking the Create Daily Routine button.
 
-From this form, you can create a new daily routine by filling out all the sections provided.
+On this form, you can create a new daily routine based on what you want to accomplish by filling out all the sections listed.
 
 <img width="1160" alt="Screen Shot 2020-09-17 at 7 43 02 PM" src="https://user-images.githubusercontent.com/61069416/93539258-37e04080-f91e-11ea-8c5e-e382b694f6e6.png">
 <img width="1218" alt="Screen Shot 2020-09-17 at 7 43 39 PM" src="https://user-images.githubusercontent.com/61069416/93539246-31ea5f80-f91e-11ea-9ab1-de039a6ac882.png">
-
 <img width="1271" alt="Screen Shot 2020-09-17 at 7 48 31 PM" src="https://user-images.githubusercontent.com/61069416/93539429-c9e84900-f91e-11ea-8a54-746110f7b152.png">
+
+## Ranking Tasks
+
+Rank your Daily Tasks from Highest to Lowest Priority based on a scale from 1-6. Where 6 is the highest priority and 1 is the lowest priority. This was achieved using an Active Record custom Scope method. 
 
 
 

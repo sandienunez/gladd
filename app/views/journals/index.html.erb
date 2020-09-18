@@ -6,7 +6,7 @@
 <ul>
     <% @journals.each do |journal|%>
 <br>
-  <li><%= journal.user.full_name %>  made: <%= link_to journal.date, journal_path(journal) %>
+  <strong><li><%= journal.user.full_name %></strong>   <%= link_to journal.date.strftime("%a %b %e %Y"), journal_path(journal) %></li>
 <br>
 <% if current_user == journal.user %> 
     <%= button_to "Edit", edit_journal_path(journal), method: :get  %> 

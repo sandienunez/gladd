@@ -7,6 +7,7 @@ class User < ApplicationRecord
   #is this still needed since i have a Task belongs_to :user assocation, if i already established relationship above?
   #if often has_many is on other side of a belongs_to assosciation 
   has_many :journals 
+  has_many :daily_routines
 
   validates :email, uniqueness: true, presence: true  
   validates_presence_of :full_name

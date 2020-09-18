@@ -6,7 +6,7 @@
 <ul>
     <% @daily_routines.each do |daily_routine|%>
 <br>
-  <li><%= daily_routine.user.full_name %>  made: <%= link_to daily_routine.date, daily_routine_path(daily_routine) %>
+ <strong><li><%= daily_routine.user.full_name %></strong>  <%= link_to daily_routine.date.strftime("%a %b %e %Y"), daily_routine_path(daily_routine) %></li>
 <br>
 <% if current_user == daily_routine.user %> 
     <%= button_to "Edit", edit_daily_routine_path(daily_routine), method: :get  %> 

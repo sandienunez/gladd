@@ -59,7 +59,7 @@ h2 {
 <h2>Comments. </h2>
     <% @task.comments.each do |comment| %>
      <br>   
-     <strong><%= current_user.full_name %></strong> <%= comment.message %> 
+     <strong><%= comment.user.full_name %></strong> <%= comment.message %> 
      <p><%= comment.updated_at.strftime("%B %d, %Y at %l:%M%P") %></p>
  
                 <br>   
