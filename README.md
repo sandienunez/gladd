@@ -52,9 +52,9 @@ This app was created to help people with ADD and ADHD (Attention-deficit/hyperac
 
 ## Create Tasks
 
-Map out your Daily tasks by clicking the Create Daily Tasks button.
+Map out your Daily tasks by clicking the Create Task button.
 
-On this form, you can create a new daily task by filling out all the sections listed.
+On this form, you can create a new daily task by filling out the task name and three actions to ensure the task is completed. A user is also asked to select the date the task was created as well as the deadline date. Lastly, you can choose the level of priority for that specific task.
 
 <img width="1205" alt="Screen Shot 2020-09-17 at 8 01 52 PM" src="https://user-images.githubusercontent.com/61069416/93544374-f22a7480-f92b-11ea-96f3-2cae66a4d591.png">
 <img width="1292" alt="Screen Shot 2020-09-17 at 8 00 30 PM" src="https://user-images.githubusercontent.com/61069416/93544416-09696200-f92c-11ea-86ea-ccb2bf8b57cb.png">
