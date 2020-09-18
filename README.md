@@ -105,7 +105,14 @@ A user can create, edit and delete comments they make on tasks they made or task
 
 <img width="1172" alt="Screen Shot 2020-09-17 at 9 35 39 PM" src="https://user-images.githubusercontent.com/61069416/93545416-52221a80-f92e-11ea-80b8-cffd86423803.png">
 
+
 <img width="1108" alt="Screen Shot 2020-09-17 at 9 42 40 PM" src="https://user-images.githubusercontent.com/61069416/93545589-c8bf1800-f92e-11ea-955d-5f1f3e9e75bd.png">
+
+<img width="951" alt="Screen Shot 2020-09-17 at 9 35 03 PM" src="https://user-images.githubusercontent.com/61069416/93545433-5ea67300-f92e-11ea-934d-298db1d1d7bd.png">
+
+
+<img width="1172" alt="Screen Shot 2020-09-17 at 9 35 39 PM" src="https://user-images.githubusercontent.com/61069416/93545416-52221a80-f92e-11ea-80b8-cffd86423803.png">
+
 
 
 ## Prerequisites
