@@ -63,23 +63,14 @@ On this form, you can create a new daily routine based on what you want to accom
 ## Create your Daily Journal
 
 <img width="1285" alt="Screen Shot 2020-09-17 at 8 10 30 PM" src="https://user-images.githubusercontent.com/61069416/93543973-e12d3380-f92a-11ea-96a8-d54faae819fb.png">
-
 <img width="1287" alt="Screen Shot 2020-09-17 at 8 10 39 PM" src="https://user-images.githubusercontent.com/61069416/93543954-d70b3500-f92a-11ea-8769-1e3153392d24.png">
-
 <img width="1280" alt="Screen Shot 2020-09-17 at 8 10 56 PM" src="https://user-images.githubusercontent.com/61069416/93543940-cd81cd00-f92a-11ea-9590-39fbe681de08.png">
-
 <img width="1253" alt="Screen Shot 2020-09-17 at 8 11 10 PM" src="https://user-images.githubusercontent.com/61069416/93543919-bf33b100-f92a-11ea-9038-07c06465a04f.png">
-
 <img width="1146" alt="Screen Shot 2020-09-17 at 8 11 23 PM" src="https://user-images.githubusercontent.com/61069416/93543907-b7740c80-f92a-11ea-867d-0f9d8a37568f.png">
-
 <img width="1274" alt="Screen Shot 2020-09-17 at 8 11 34 PM" src="https://user-images.githubusercontent.com/61069416/93543885-af1bd180-f92a-11ea-9ebc-e987fd201852.png">
-
 <img width="1193" alt="Screen Shot 2020-09-17 at 8 11 47 PM" src="https://user-images.githubusercontent.com/61069416/93543869-a62b0000-f92a-11ea-9ed3-ad0dd4e8c484.png">
-
 <img width="1240" alt="Screen Shot 2020-09-17 at 8 11 55 PM" src="https://user-images.githubusercontent.com/61069416/93543853-9dd2c500-f92a-11ea-9ed0-25120a69994f.png">
-
 <img width="1254" alt="Screen Shot 2020-09-17 at 8 12 02 PM" src="https://user-images.githubusercontent.com/61069416/93543831-93183000-f92a-11ea-95d5-02af46e01bef.png">
-
 <img width="1261" alt="Screen Shot 2020-09-17 at 8 12 09 PM" src="https://user-images.githubusercontent.com/61069416/93543822-8a275e80-f92a-11ea-92e1-28dbd0013e44.png">
 
 
