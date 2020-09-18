@@ -63,8 +63,7 @@ On this form, you can create a new daily task by filling out the task name and t
 <img width="1292" alt="Screen Shot 2020-09-17 at 8 00 30 PM" src="https://user-images.githubusercontent.com/61069416/93544416-09696200-f92c-11ea-86ea-ccb2bf8b57cb.png">
 <img width="1279" alt="Screen Shot 2020-09-17 at 8 00 42 PM" src="https://user-images.githubusercontent.com/61069416/93544399-02daea80-f92c-11ea-9e20-bf6414a83067.png">
 <img width="1198" alt="Screen Shot 2020-09-17 at 8 00 55 PM" src="https://user-images.githubusercontent.com/61069416/93544390-fd7da000-f92b-11ea-9880-94938232f094.png">
-<img width="1146" alt="Screen Shot 2020-09-17 at 8 03 08 PM" src="https://user-images.githubusercontent.com/61069416/93544350-e2ab2b80-f92b-11ea-9a0b-2cc7aa6bb8a2.png">
-<img width="1186" alt="Screen Shot 2020-09-17 at 8 03 27 PM" src="https://user-images.githubusercontent.com/61069416/93544360-e8a10c80-f92b-11ea-8c1b-1aa41643f913.png">
+<img width="1062" alt="Screen Shot 2020-09-17 at 9 37 16 PM" src="https://user-images.githubusercontent.com/61069416/93545257-f8215500-f92d-11ea-9529-4b9c7761d33e.png">
 <img width="1147" alt="Screen Shot 2020-09-17 at 8 10 01 PM" src="https://user-images.githubusercontent.com/61069416/93544287-b394ba00-f92b-11ea-8521-d6518d55a81a.png">
 <img width="1147" alt="Screen Shot 2020-09-17 at 8 06 15 PM" src="https://user-images.githubusercontent.com/61069416/93544326-c7402080-f92b-11ea-936c-7bb6a4fd3645.png">
 
