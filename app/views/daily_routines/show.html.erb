@@ -39,8 +39,8 @@ h2 {
 <%= button_to "Delete Daily Routine", daily_routine_path(@daily_routine), method: :delete, data: {confirm: "Are you sure you want to delete this daily routine?"} %>
 <br> 
 <% end %> 
-
-<br>  
+<%= button_to "All Daily Routines", daily_routines_path, method: :get %> 
+ 
 
 
 </ul>

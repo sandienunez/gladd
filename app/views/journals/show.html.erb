@@ -85,6 +85,8 @@ h2 {
 <%= button_to "Delete Journal", journal_path(@journal), method: :delete, data: {confirm: "Are you sure you want to delete this journal?"} %>
 <br> 
 <% end %> 
+<%= button_to "All Daily Journals", journals_path, method: :get %> 
+
 
 
 
