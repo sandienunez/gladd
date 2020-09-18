@@ -103,17 +103,11 @@ Rank your Daily Tasks from Highest to Lowest Priority based on a scale from 1-6.
 
 A user can create, edit and delete comments they make on tasks they made or tasks from other tasky penguins in the community. 
 
-<img width="1172" alt="Screen Shot 2020-09-17 at 9 35 39 PM" src="https://user-images.githubusercontent.com/61069416/93545416-52221a80-f92e-11ea-80b8-cffd86423803.png">
-
 
 <img width="1108" alt="Screen Shot 2020-09-17 at 9 42 40 PM" src="https://user-images.githubusercontent.com/61069416/93545589-c8bf1800-f92e-11ea-955d-5f1f3e9e75bd.png">
 
-<img width="951" alt="Screen Shot 2020-09-17 at 9 35 03 PM" src="https://user-images.githubusercontent.com/61069416/93545433-5ea67300-f92e-11ea-934d-298db1d1d7bd.png">
 
-
-<img width="1172" alt="Screen Shot 2020-09-17 at 9 35 39 PM" src="https://user-images.githubusercontent.com/61069416/93545416-52221a80-f92e-11ea-80b8-cffd86423803.png">
-
-
+<img width="1067" alt="Screen Shot 2020-09-17 at 9 47 29 PM" src="https://user-images.githubusercontent.com/61069416/93545829-6b779680-f92f-11ea-982b-6931d5d55e2f.png">
 
 ## Prerequisites
 Other than the gems listed in this app's Gemfile, you will need to have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html) installed on your local machine as well as the ability to install Ruby gems.
