@@ -79,8 +79,8 @@ class CommentsController <  ApplicationController
 
     def set_comment
         @comment = Comment.find_by(id: params[:id])
-            if !@comment
-                redirect_to comments_path
+            if !@comment || @comment.user != current_user
+                redirect_to comments_path, notice: "Sorry! Tasky penguin says you're not authorized to view this comment! So flap your wings out of here!"    
             end
     end
 
