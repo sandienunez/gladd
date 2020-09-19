@@ -15,15 +15,6 @@ h2 {
 <h2> Task.  </h2>
 <h2>-------------> <%= @task.task_name %> <--------------</h2>
 <div style="text-align: left;">
-
-<h2> <%=  @task.date.strftime("%a %b %e %Y")  %>.</h2>
-<h2>Priority: <%= @task.priority_ranking %> </h2>
-<p> 6 = Highest Priority (Task needs to be completed right now, MOST important)</p>
-<p> 5 = Highest Priority (Task needs to be completed today BUT can wait until later today, extra important)</p>
-<p> 4 = Lowest Priority (Task needs to be finished by tomorrow, very important)</p>
-<p> 3 = Lowest Priority (Task will be completed in the next 2 days, pretty important)</p>
-<p> 2 = Lowest Priority (Task should be done this week if possible, not as pressing)</p>
-<p> 1 = Lowest Priority (Task can be done by next week, not urgent at all)</p>
 <h3>3 actions to help you finish this task.</h3>
 <%= label_tag("Please check off these actions when you complete them.") %>
 
@@ -36,6 +27,14 @@ h2 {
 <h3><%= check_box_tag(:action_three) %> 
 <%= label_tag(:action_three, "Action 3:") %> <%=  @task.action_three %></h3>
 
+<h2> Task created on: <%=  @task.date.strftime("%a %b %e %Y")  %>.</h2>
+<h2>Priority: <%= @task.priority_ranking %> </h2>
+<p> 6 = Highest Priority (Task needs to be completed right now, MOST important)</p>
+<p> 5 = Highest Priority (Task needs to be completed today BUT can wait until later today, extra important)</p>
+<p> 4 = Lowest Priority (Task needs to be finished by tomorrow, very important)</p>
+<p> 3 = Lowest Priority (Task will be completed in the next 2 days, pretty important)</p>
+<p> 2 = Lowest Priority (Task should be done this week if possible, not as pressing)</p>
+<p> 1 = Lowest Priority (Task can be done by next week, not urgent at all)</p>
 
  <h2>Deadline: <%=  @task.deadline.strftime("%a %b %e %Y")  %>.</h2> 
  <h2> Estimate Time to finish task: <%=  @task.estimate_time_to_finish_task %></h2> 
