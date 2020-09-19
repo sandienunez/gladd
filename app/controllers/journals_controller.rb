@@ -72,7 +72,7 @@ class JournalsController < ApplicationController
 
     def set_journal
         @journal = Journal.find_by_id(params[:id])
-            if !@journal
+            if !@journal || @journal.user != current_user
                 redirect_to journals_path
             end
     end

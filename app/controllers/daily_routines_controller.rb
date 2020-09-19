@@ -71,7 +71,7 @@ class DailyRoutinesController < ApplicationController
 
     def set_daily_routine
         @daily_routine = DailyRoutine.find_by_id(params[:id])
-        if !@daily_routine
+        if !@daily_routine || @daily_routine.user != current_user
                 redirect_to daily_routines_path
             end
     end

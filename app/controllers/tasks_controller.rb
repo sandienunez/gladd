@@ -42,6 +42,11 @@ class TasksController < ApplicationController
     def edit
         if user_signed_in?
             set_task
+                if authorized_to_edit?(@task)
+                    redirect_to edit_task_path(@task)
+              else
+                redirect_to tasks_path, notice: "Sorry! Tasky penguin says you're not authorized to edit this task! So flap your wings out of here!"
+              end
         else 
             redirect_to '/'
         end 
