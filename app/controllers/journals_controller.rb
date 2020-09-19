@@ -73,7 +73,7 @@ class JournalsController < ApplicationController
     def set_journal
         @journal = Journal.find_by_id(params[:id])
             if !@journal || @journal.user != current_user
-                redirect_to journals_path
+                redirect_to journals_path, notice: "Sorry! Tasky penguin says you're not authorized to view this Daily Journal! So flap your wings out of here!"
             end
     end
 

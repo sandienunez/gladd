@@ -72,9 +72,10 @@ class DailyRoutinesController < ApplicationController
     def set_daily_routine
         @daily_routine = DailyRoutine.find_by_id(params[:id])
         if !@daily_routine || @daily_routine.user != current_user
-                redirect_to daily_routines_path
+                redirect_to daily_routines_path, notice: "Sorry! Tasky penguin says you're not authorized to view this Daily Routine! So flap your wings out of here!"
             end
     end
+
 
     def daily_routine_params
         params.require(:daily_routine).permit(:date, :"date(2i)", :daily_plan, :prayer_or_meditations, :exercise_plan, :stretch_plan, :three_superfoods_to_add_to_my_meals, :user_id)
