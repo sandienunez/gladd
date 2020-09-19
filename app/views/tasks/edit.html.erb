@@ -5,8 +5,19 @@
 
 <%= form_for(@task) do |f| %>
 
+<%= f.label :date %>
+<%= f.date_select :date, {
+            order: [:month, :day, :year],
+            date_separator: "/",
+            prompt: {
+                month: 'mm',
+                day: 'dd',
+                year: 'yyyy',
+            },
+         } %>
+<br>
+ <br>
   <%= f.label :task_name %>
-  <br>
   <br>
     <%= f.text_area :task_name %>
 
@@ -46,19 +57,6 @@
  <br>
   <br>
 
-<%= f.label :date %>
-<%= f.date_select :date, {
-            order: [:month, :day, :year],
-            date_separator: "/",
-            prompt: {
-                month: 'mm',
-                day: 'dd',
-                year: 'yyyy',
-            },
-         } %>
-
-
- <br>
    <p><%= f.label :deadline %>:
 <%= f.date_select :deadline, {
             order: [:month, :day, :year],
