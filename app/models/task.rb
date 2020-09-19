@@ -1,8 +1,8 @@
 class Task < ApplicationRecord
    scope :priority_order, -> { order(priority_ranking: :desc)}
-                                      #attribute
-
-   #when we call scope we get = ActiveRecord::Relation object
+                                 
+   #when we call on scope in controller we get = ActiveRecord::Relation object
+   
    belongs_to :user, optional: true  
    has_many :comments, dependent: :destroy
    has_many :users, through: :comments #ppl who have commented on it #joint table is comments

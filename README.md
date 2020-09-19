@@ -101,7 +101,7 @@ Rank your Daily Tasks from Highest to Lowest Priority based on a scale from 1-6.
 
 ## Create Comments
 
-A user can create, edit and delete comments they make on tasks they made or tasks from other tasky penguins in the community. 
+A user can create, edit and delete the comments they've posted on their tasks. They can also comment on tasks that belong to other tasky penguins in the community. 
 
 <img width="1067" alt="Screen Shot 2020-09-17 at 9 47 29 PM" src="https://user-images.githubusercontent.com/61069416/93545829-6b779680-f92f-11ea-982b-6931d5d55e2f.png">
 
