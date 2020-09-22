@@ -2,8 +2,10 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :comments
-  has_many :commented_tasks, through: :comments, source: :tasks #tasks they commented on 
-  has_many :tasks #that user has created 
+  has_many :commented_tasks, through: :comments, source: :tasks #keeps track of tasks user commented on 
+  #added source flag 
+  has_many :tasks #keeps track of tasks that user has created/made themselves  
+  #can't have same name bc one will override the over when calling AR methods
   has_many :journals 
   has_many :daily_routines
 
