@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
     def new
-        if user_signed_in?
+        if user_signed_in? 
             @task = Task.new
             render :new
         else 
