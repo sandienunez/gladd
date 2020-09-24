@@ -50,11 +50,6 @@
     background-color: #4CAF50;
     color: white;
   }
-
-  @font-face {
-    font-family: myFirstFont;
-    src: url(sansation_light.woff);
-  }
   
   div {
     font-family: myFirstFont;

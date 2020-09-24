@@ -13,6 +13,10 @@ class Task < ApplicationRecord
       # binding.pry
       if user.tasks.size > 5 
          errors.add(:base, "Error: To help you focus on finishing your tasks, you cannot add more then 6 tasks per day.")
-       end
+      else 
+         @tasks = Task.priority_order
+      end
+
    end
+
 end

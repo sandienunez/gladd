@@ -24,7 +24,7 @@ gem 'omniauth-github'
 gem 'dotenv-rails'
 gem 'bcrypt'
 gem 'rename'
-gem 'bootstrap', '~> 5.0.0.alpha1'
+# gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'flash_rails_messages'
 
 # Use Redis adapter to run Action Cable in production
