@@ -11,7 +11,7 @@ Rails.application.routes.draw do
    
 
   resources :comments
-  resources :tasks
+  # resources :tasks
   resources :journals
   resources :daily_routines
 

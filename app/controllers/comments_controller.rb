@@ -2,8 +2,19 @@ class CommentsController <  ApplicationController
     # before_action :security_check
 
     def new
+        # binding.pry
+        #if task_id come thru
+        #added new feature that lets user be on the correct comment when in the nested route! = better user experience
         if user_signed_in?
-            @comment = Comment.new  
+
+            if params[:task_id]
+                # binding.pry
+                @task = Task.find_by(id: params[:task_id])
+                @comment = @task.comments.build 
+            else
+                @comment = Comment.new
+            end 
+             
         else 
             redirect_to '/'
          end 

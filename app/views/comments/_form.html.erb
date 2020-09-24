@@ -1,6 +1,8 @@
   <% if !@comment.task %>
     <%= f.label :task_name %>
+    <% if !@task %>
      <%= f.collection_select :task_id, Task.all, :id, :task_name %>
+     <% end %>
      <% else %>
     <%= f.hidden_field :task_id %>
     <% end %>
