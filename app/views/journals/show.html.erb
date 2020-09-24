@@ -47,7 +47,8 @@ h2 {
 <h3>Lunch:</h3><%= @journal.lunch %>
 <h3>Snack two:</h3><%= @journal.snack_two%>
 <h3>Dinner:</h3><%= @journal.dinner %>
-<h3>Was this a healthy meal? </h3><%= @journal.healthy %>
+<h3>Was this a healthy meal? </h3><%= boolean_to_words(@journal.healthy) %>
+
 <h3>How did I feel after I ate this meal:</h3><%= @journal.how_did_i_feel_after %>
 <br>
 <h3> Below, fill out what is most important to you in these areas. Write what you want for each goal and what you do not want for each goal.</h3>

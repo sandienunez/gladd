@@ -22,7 +22,7 @@ class CreateJournals < ActiveRecord::Migration[6.0]
       t.string :lunch
       t.string :snack_two
       t.string :dinner
-      t.integer :healthy
+      t.boolean :healthy
       t.text :how_did_i_feel_after
       t.string :brain_health
       t.string :physical_health
