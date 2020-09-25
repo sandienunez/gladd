@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-before_action :checked_signed_in
+before_action :authenticate_user!
 
     def new
         @task = Task.new
@@ -62,9 +62,4 @@ before_action :checked_signed_in
 
     #strong params = needed when you are mass assigning data 
 
-    def checked_signed_in
-        if !user_signed_in? 
-            redirect_to '/'
-        end
-    end
 end 

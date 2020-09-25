@@ -1,70 +1,44 @@
 class DailyRoutinesController < ApplicationController
+    before_action :authenticate_user!
+       
     def new
-        if user_signed_in?
-            @daily_routine = DailyRoutine.new  
-        else 
-            redirect_to '/'
-        end 
+        @daily_routine = DailyRoutine.new  
     end
 
     def create
-        if user_signed_in?
-            @daily_routine = current_user.daily_routines.build(daily_routine_params)
-                if @daily_routine.save
+        @daily_routine = current_user.daily_routines.build(daily_routine_params)
+            if @daily_routine.save
                     redirect_to daily_routines_path
                 else
                     render :new
                 end
-        else 
-            redirect_to '/'
-        end 
     end
 
     def edit 
-        if user_signed_in?
-            set_daily_routine
-        else 
-            redirect_to '/'
-        end 
+        set_daily_routine
     end
 
     def show
-        if user_signed_in?
             set_daily_routine
-        else 
-            redirect_to '/'
-        end 
     end
 
     def index 
-        if user_signed_in?
-            @daily_routines = DailyRoutine.all
-        else 
-            redirect_to '/'
-        end 
+        @daily_routines = DailyRoutine.all
     end
 
     def update
-        if user_signed_in?
-            set_daily_routine
-                if  @daily_routine.update(daily_routine_params) && current_user.id == @daily_routine.user_id 
-                    redirect_to daily_routines_path(@daily_routine)
-                end 
-        else 
-            redirect_to '/'
-        end 
+        set_daily_routine
+            if  @daily_routine.update(daily_routine_params) && current_user.id == @daily_routine.user_id 
+                redirect_to daily_routines_path(@daily_routine)
+            end 
     end
 
     def destroy
-        if user_signed_in?
-            set_daily_routine
-                if current_user.id == @daily_routine.user_id
-                    @daily_routine.destroy
-                end
-            redirect_to daily_routines_path
-        else 
-            redirect_to '/'
-        end 
+        set_daily_routine
+            if current_user.id == @daily_routine.user_id
+                @daily_routine.destroy
+            end
+        redirect_to daily_routines_path
     end
 
     private

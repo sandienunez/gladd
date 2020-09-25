@@ -1,71 +1,46 @@
 class JournalsController < ApplicationController
+before_action :authenticate_user!
+
     def new
-        if user_signed_in?
-            @journal = Journal.new  
-        else 
-            redirect_to '/'
-        end 
+        @journal = Journal.new  
     end
 
     def index 
-        if user_signed_in?
-            @journals = Journal.all
-        else 
-            redirect_to '/'
-        end 
+        @journals = Journal.all
+
     end
 
     def create
-        if user_signed_in?
-            @journal = Journal.new(journal_params)
-                if @journal.save
-                    redirect_to journal_path(@journal)
-                else 
-                    render :new
-                end 
+    @journal = Journal.new(journal_params)
+        if @journal.save
+            redirect_to journal_path(@journal)
         else 
-            redirect_to '/'
+            render :new
         end 
     end
 
     def edit 
-        if user_signed_in?
-            set_journal
-        else 
-            redirect_to '/'
-        end 
+        set_journal
     end
 
     def show
-        if user_signed_in?
-            set_journal
-        else 
-            redirect_to '/'
-        end 
+        set_journal
     end
 
 
     def update
-        if user_signed_in?
-            set_journal
-                if  @journal.update(journal_params) && current_user.id == @journal.user_id 
-                    redirect_to journals_path(@journal)
-                end 
-        else 
-            redirect_to '/'
-        end 
+        set_journal
+            if  @journal.update(journal_params) && current_user.id == @journal.user_id 
+                redirect_to journals_path(@journal)
+            end 
     end
 
     def destroy
-        if user_signed_in?
-            set_journal
-                if current_user.id == @journal.user_id
-                    @journal.destroy
-                end
+        set_journal
+            if current_user.id == @journal.user_id
+                @journal.destroy
+            end
             redirect_to journals_path
-        else 
-            redirect_to '/'
-        end 
     end
 
     private

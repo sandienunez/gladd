@@ -1,12 +1,9 @@
 class CommentsController <  ApplicationController
-    # before_action :security_check
-
+before_action :authenticate_user!
     def new
         # binding.pry
         #if task_id come thru
         #added new feature that lets user be on the correct comment when in the nested route! = better user experience
-        if user_signed_in?
-
             if params[:task_id]
                 # binding.pry
                 @task = Task.find_by(id: params[:task_id])
@@ -14,76 +11,48 @@ class CommentsController <  ApplicationController
             else
                 @comment = Comment.new
             end 
-             
-        else 
-            redirect_to '/'
-         end 
     end
 
     def create
-        if user_signed_in?
-            @comment = current_user.comments.build(comment_params)
-                if @comment.save
-                    redirect_to comments_path
-                else
-                    render :new
-                end
-        else 
-            redirect_to '/'
-        end 
+        @comment = current_user.comments.build(comment_params)
+            if @comment.save
+                redirect_to comments_path
+            else
+                render :new
+            end
     end
 
     def edit 
-        if user_signed_in?
-            set_comment 
-        else 
-            redirect_to '/'
-        end 
+        set_comment 
+ 
     end
 
     def show
-        if user_signed_in?
-            set_comment
-        else 
-            redirect_to '/'
-        end 
+        set_comment
     end
 
     def index 
-        if user_signed_in?
-            if params[:task_id] && @task = Task.find_by_id(params[:task_id])
-                @comments = @task.comments
-            else
-                @comments = Comment.all
-            end
-        else 
-            redirect_to '/'
-        end 
+        if params[:task_id] && @task = Task.find_by_id(params[:task_id])
+            @comments = @task.comments
+        else
+            @comments = Comment.all
+        end
     end
 
     def update
-        if user_signed_in?
-            set_comment
-                if current_user.id == @comment.user_id 
-                    @comment.update(comment_params)
-                end 
-               
+        set_comment
+            if current_user.id == @comment.user_id 
+                @comment.update(comment_params)
+            end   
             redirect_to comments_path 
-        else 
-            redirect_to '/'
-        end 
     end
 
     def destroy
-        if user_signed_in?
-            set_comment
-                if current_user.id == @comment.user_id
-                    @comment.destroy
-                end
-            redirect_to comments_path 
-        else 
-            redirect_to '/'
-        end 
+        set_comment
+            if current_user.id == @comment.user_id
+                @comment.destroy
+            end
+        redirect_to comments_path 
     end
 
     private
